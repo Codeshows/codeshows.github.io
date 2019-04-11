@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Codeshows</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <style media="screen">
+
+      .head{
+      background-color: white;
+      box-shadow: 2px 0 22px grey;
+      height: auto;
+      width: 100%;
+      color:black;
+      padding-top: 5px;
+      padding-bottom:5px;
+      padding-left:20px;
+      overflow: auto;
+      box-sizing: border-box;
+      background: white;
+      overflow: hidden;
+      height: 80px;
+      position: fixed;
+      top:0;
+
+    }
+    .logo1{
+      width: 100px;
+      height: 80px;
+      background: url('img/logo.png');
+      background-position: 50% 50%;
+      background-size: cover;
+      float: left;
+    }
+    .logo2{
+      height: 40px;
+      float: left;
+      padding: 10px 0 20px 10px;
+      font-size: 30px;
+      font-family:fontawesome;
+      text-decoration:none;
+      font-size:37px;
+      letter-spacing:1px;
+      font-weight:bold;
+      color:#555555;
+    }
+
+        .litype{
+            height:40px;
+            line-height: 18px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fafafa;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1em;
+            font-weight: 300;
+            line-height: 1.7em;
+            color: #999;
+        }
+
+        a,
+        a:hover,
+        a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .navbar {
+            padding: 15px 10px;
+            background: #fff;
+            border: none;
+            border-radius: 0;
+            margin-bottom: 40px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-btn {
+            box-shadow: none;
+            outline: none !important;
+            border: none;
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px dashed #ddd;
+            margin: 40px 0;
+        }
+
+        /* ---------------------------------------------------
+            SIDEBAR STYLE
+        ----------------------------------------------------- */
+
+        .wrapper {
+            display: flex;
+            width: 100%;
+            min-height:600px;
+            overflow-y:scroll;
+            position:fixed;
+            top:80px;
+
+
+        }
+
+        #sidebar {
+            width: 250px;
+            position: fixed;
+             top: 80px;
+            left: 0;
+            height: 100vh;
+            z-index: 999;
+            background: #7386D5;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        #sidebar.active {
+            margin-left: -250px;
+        }
+
+        #sidebar .sidebar-header {
+            padding: 20px;
+            background: #6d7fcc;
+        }
+
+        #sidebar ul.components {
+            padding: 20px 0;
+            border-bottom: 1px solid #47748b;
+        }
+
+        #sidebar ul p {
+            color: #fff;
+            padding: 10px;
+        }
+
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1.1em;
+            display: block;
+        }
+
+        #sidebar ul li a:hover {
+            color: #7386D5;
+            background: #fff;
+        }
+
+        #sidebar ul li.active>a,
+        a[aria-expanded="true"] {
+            color: #6D7FCC;
+            background: white;
+        }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #6d7fcc;
+        }
+
+        ul.CTAs {
+            padding: 20px;
+        }
+
+        ul.CTAs a {
+            text-align: center;
+            font-size: 0.9em !important;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        a.download {
+            background: #fff;
+            color: #7386D5;
+        }
+
+        a.article,
+        a.article:hover {
+            background: #6d7fcc !important;
+            color: #fff !important;
+        }
+
+        .btn-info{
+          background-color: #7386D5;
+          border-color: #5258a8 ;
+        }
+
+        /* ---------------------------------------------------
+            CONTENT STYLE
+        ----------------------------------------------------- */
+
+        #content {
+            width: calc(100% - 250px);
+            padding: 40px;
+            height:auto;
+
+            transition: all 0.3s;
+            position: absolute;
+            right: 0;
+        }
+
+        #content.active {
+            width: 100%;
+        }
+
+        .subcontent{
+          display:none;
+        }
+
+        .subcontent.active{
+          display: block;
+        }
+
+        /* ---------------------------------------------------
+            MEDIAQUERIES
+        ----------------------------------------------------- */
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -250px;
+            }
+            #sidebar.active {
+                margin-left: 0;
+            }
+            #content {
+                width: 100%;
+            }
+            #content.active {
+                width: calc(100% - 250px);
+            }
+            .sidebarCollapse span {
+                display: none;
+            }
+
+            .browser-default{
+              width: 150px;
+              position: absolute;
+              right: 120px;
+            }
+
+            #contact .flex{
+              width: 100% !important;
+            }
+        }
+
+        .clear{
+          clear:both;
+        }
+        h1{
+          font-size:30px;
+          font-family:cursive;
+          text-align:center;
+        }
+
+        #home .container2 {
+          position: relative;
+          /* width: 15%; */
+          margin-bottom: 15%;
+          border-radius: 10%;
+          /* float: left; */
+          overflow: hidden;
+        }
+
+
+          #home .image {
+            display: block;
+            width: 100%;
+            height: 150px;
+          }
+
+          #home .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #7386D5 ;
+            overflow: hidden;
+            margin-left:0/75%;
+            margin-right:0.75%;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+          }
+
+          #home .container2:hover .overlay {
+            width: 100%;
+          }
+
+          #home .text {
+            color: white;
+            font-size: 18px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align:center;
+          }
+          #home .texti {
+            color: white;
+            font-size: 11px;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+          }
+
+
+    		#home .container1{
+    			width: 98%;
+    			height: 500px;
+    			padding: 1%;
+    			float:left;
+    		}
+
+    		#home .main{
+
+    			width: 98%;
+    			margin-bottom: 1%;
+    			height: auto;
+    			padding: 1%;
+    		}
+
+        #home .main .row{
+
+
+    			margin-left: 3%;
+    		}
+
+    		#home .heading{
+    			font-size: 30px !important;
+    			color: #5258a8 !important;
+    			font-weight: bold !important;
+    			text-transform: uppercase !important;
+
+    		}
+
+        #home .heading1{
+    			font-size: 25px !important;
+    			color: #5258a8 !important;
+    			font-weight: bold !important;
+    			text-transform: uppercase !important;
+          padding:2%;
+
+    		}
+
+        #contest .container1{
+            width: 98%;
+            height: 500px;
+            padding: 1%;
+            float:left;
+          }
+          #contest .con{
+            /* background-color: grey; */
+            padding-bottom: 1.5%;
+            margin-top:22px;
+            margin-bottom: 22px;
+            overflow:hidden;
+            border:1px solid #7386D5;
+            border-radius:20px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            /* border-top-left-radius: 5%;
+            border-top-right-radius: 5%;  */
+
+          }
+          #contest .main{
+
+            width: 98%;
+            margin-bottom: 1%;
+            height: auto;
+            /*padding: 1%;*/
+            font: black;
+          }
+
+          #contest .heading{
+
+            font-size: 30px;
+            color: #5258a8;
+            text-transform: uppercase;
+            font-weight: bold;
+
+
+          }
+
+          #contest a:hover {
+            color: blue;
+          }
+
+
+          #contest li{
+            margin-left: 1.5%;
+            padding-left: 1.5%;
+            font-family:comic sans MS;
+            font-size:20px;
+            line-height: 1.6;
+          }
+          #contest .contest1{
+            /* border-radius: 8px; */
+            background-color:#7386D5 ;
+            color: #fafafa;
+            padding-left:1%;
+            padding-top:0.8%;
+            padding-bottom: 0.8%;
+            padding-left: 30px;
+            font-family: georgia;
+            font-size:20px;
+          }
+          #contest a{
+            text-decoration:none;
+          }
+          #contest p{
+            margin-bottom: .8%;
+          }
+
+
+        #tutorial  .list-groupp{
+         margin-top:2%;
+         cursor:pointer;
+       }
+
+       #tutorial .list-group-iteem{
+         padding:1%;
+         padding-right:2%;
+         padding-left: 7%;
+         min-height:10px;
+         background: white;
+         border-radius: 20px;
+         box-sizing: border-box;
+         border: 0.5px solid #6D7FCC;
+         text-width:bold;
+
+       }
+
+       #tutorial .list-group-iteem hr{
+         margin-top:2px;
+         margin-bottom:10px;
+
+       }
+
+       #tutorial .hide{
+         color: black !important;
+         font-size:12px;
+         padding-bottom:10px;
+         text-width:bold;
+         opacity: 1 !important;
+       }
+
+       #tutorial .hide p{
+         color: black;
+       }
+
+       #tutorial .hide h3 {
+         font-size: 20px;
+       }
+
+       #tutorial .hide a {
+         color: blue !important;
+       }
+
+       #tutorial .hiddd{
+         display:none;
+       }
+
+       #contact p{
+			text-align:center;
+		    font-weight:bolder;
+		    font-size:40px;
+		    font-family: monospace;
+		    color:#5258a8;
+		  }
+  		#contact a{
+  			font-size: 20px;
+  			font-family: cursive;
+  			text-align:center;
+  			color: black;
+  			padding: 15px 0px 15px 20px;
+  			text-decoration:none;
+  		}
+  		#contact a:hover{
+  		    color:blue;
+  		    text-decoration:none;
+  		}
+  		#contact a:visited{
+  		    color:black;
+  		    text-decoration:none;
+  		}
+  		#contact .row{
+  			width:100%;
+  			height:auto;
+  			border:1.5px solid #8642f4;
+  			border-radius:20px;
+  			padding: 10px;
+  			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  			margin-bottom: 30px;
+  			margin-top: 30px;
+  		}
+  		#contact i{
+  			/* margin-left: 10px; */
+  			font-size: 30px;
+  		}
+
+      #contact .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        width:50px;
+      }
+
+      .developer {
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      .developer img {
+        width: 225px;
+        height: 225px;
+        border: 7px solid #fff;
+        transition:0.3s;
+      }
+
+      .developer h4 {
+        margin-top: 25px;
+        margin-bottom: 0;
+        text-transform: none;
+      }
+
+      .developer p {
+        margin-top: 0;
+      }
+
+      .developer img:hover{
+        transform: scale(1.1);
+      }
+
+
+    </style>
+
+</head>
+
+<body>
+
+  <div class="head">
+     <div class="logo1"> </div>
+     <div class="logo2"> Codeshows </div>
+     <div class="clear">
+     </div>
+
+   </div>
+
+    <div class="wrapper">
+        <nav id="sidebar">
+
+            <ul class="list-unstyled components">
+                <li class="tablinks active" onclick="show(event, 'home') ">
+
+                    <a href="#"><i class="fas fa-eye"></i> Home </a>
+                </li>
+                <li class="tablinks" onclick="show(event,'contest')">
+
+                    <a href="#"> <i class="fas fa-ambulance"></i> Contest</a>
+                </li>
+                <li class="tablinks" onclick="show(event,'tutorial')">
+                    <a href="#"><i class="fab fa-adn"></i> Tutorial </a>
+                </li>
+                <li class="tablinks" onclick="show(event,'contact')">
+                    <a href="#"><i class="fas fa-medkit"></i> Contact Us</a>
+                </li>
+
+                <li class="tablinks" onclick="show(event,'developer')">
+                    <a href="#"><i class="fas fa-medkit"></i> Developers </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+          <div class="subcontent active" id="home">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <button type="button"  class="btn btn-info sidebarCollapse">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+
+                    </div>
+                </nav>
+              <div class="container home">
+                            <div class="container1">
+                                  <div class="main">
+                                    <div class="heading"> About </div>
+                                    <hr>
+                                    <div id="info">
+                                      <p> Hey Folks!
+                                This is an initiative by the students of 4th year to build a coding club that will serve the purpose of providing the environment for coders to flourish and shine. We will create a platform which allows students to gain assistance and mentorship to enhance their coding ability. Our aim is to propagate the enthusiasm for coding in the institute and especially amongst freshmen. Moreover, the best skilled coders will be there to guide you through the process. This endeavour is not just for creating a culture for competitive coding but we also will mentor you in technologies like Machine Learning , Web Development , Android App Development and many more. You may fill the field of your interest in the form.
+
+                                So come forward and be a part of CodeShows family.</p>
+                                    </div>
+
+                                    <div class="clear"></div>
+                                  </div>
+
+                                  <div class="main">
+                                    <div class="heading">CODESHOWS TEAM</div>
+                                    <hr>
+                                    <div class="heading1">FOUNDERS</div>
+                                    <div class="row">
+                                            <div class="col-md-2 col-sm-6">    <div class="container2">
+                                            <img src="img/avatar.png" alt="Avatar" class="image">
+                                            <div class="overlay">
+                                              <div class="text">Ritika Mor</div>
+                                              <div class="texti">2017uec1194@mnit.ac.in</div>
+                                            </div>
+                                            </div> </div>
+                                    </div>
+
+                                  <div class="heading1">MENTORS</div>
+                                      <div class="row">
+                                            <div class="col-md-2 col-sm-6">    <div class="container2">
+                                            <img src="img/avatar.png" alt="Avatar" class="image">
+                                            <div class="overlay">
+                                              <div class="text">Ritika Mor</div>
+                                              <div class="texti">2017uec1194@mnit.ac.in</div>
+                                            </div>
+                                            </div> </div>
+                                       </div>
+
+
+                                  <div class="heading1">SUBMENTORS</div>
+                                          <div class="row">
+                                              <div class="col-md-2 col-sm-6">    <div class="container2">
+                                              <img src="img/avatar.png" alt="Avatar" class="image">
+                                              <div class="overlay">
+                                                <div class="text">Ritika Mor</div>
+                                                <div class="texti">2017uec1194@mnit.ac.in</div>
+                                              </div>
+                                              </div> </div>
+
+                                          <div class="col-md-2 col-sm-6">    <div class="container2">
+                                              <img src="img/avatar.png" alt="Avatar" class="image">
+                                              <div class="overlay">
+                                                <div class="text">Ravi Sarawsat</div>
+                                                <div class="texti">2017uec1163@mnit.ac.in</div>
+                                              </div>
+                                              </div> </div>
+
+
+                                              <div class="col-md-2 col-sm-6"> <div class="container2">
+                                              <img src="img/avatar.png" alt="Avatar" class="image">
+                                              <div class="overlay">
+                                                <div class="text">Suryaprakash Agarawal</div>
+                                                <div class="texti">2017uec1231@mnit.ac.in</div>
+                                              </div>
+                                              </div> </div>
+
+                                              <div class="col-md-2 col-sm-6"><div class="container2">
+                                              <img src="img/avatar.png" alt="Avatar" class="image">
+                                              <div class="overlay">
+                                                <div class="text">Dhruv Golani</div>
+                                                <div class="texti">2017uec1056@mnit.ac.in</div>
+                                              </div>
+                                              </div> </div>
+
+                                            <div class="col-md-2 col-sm-6">  <div class="container2">
+                                              <img src="img/avatar.png" alt="Avatar" class="image">
+                                              <div class="overlay">
+                                                <div class="text">Tapan Goyal</div>
+                                                <div class="texti">2017ucp1356@mnit.ac.in</div>
+                                              </div>
+                                              </div> </div>
+
+                                              <div class="col-md-2 col-sm-6"><div class="container2">
+                                              <img src="img/avatar.png" alt="Avatar" class="image">
+                                              <div class="overlay">
+                                                <div class="text">Himanshu Gwalani</div>
+                                                <div class="texti">2017uec1194@mnit.ac.in</div>
+                                              </div>
+                                              </div></div>
+
+
+
+                                               <div class="col-md-2 col-sm-6">  <div class="container2">
+                                              <img src="img/avatar.png" alt="Avatar" class="image">
+                                              <div class="overlay">
+                                                <div class="text">Shivanshu Gupta</div>
+                                                <div class="texti">2017ucp1617@mnit.ac.in</div>
+                                              </div>
+                                              </div> </div>
+
+                                          </div>
+                                </div>
+                      </div>
+              </div>
+
+          </div>
+
+
+
+          <div class="subcontent" id="contest">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                      <button type="button"  class="btn btn-info sidebarCollapse">
+                          <i class="fas fa-align-left"></i>
+                      </button>
+
+                  </div>
+              </nav>
+
+              <div class="container contest">
+                    <div class="container1">
+                        <div class="main">
+                        <div class="heading">CONTEST LINKS</div>
+                        <div class="con">
+                        <p class="contest1"> Contest 5: (Code Friday) (8 March 2019)</p>
+                        <li ><a href="http://hck.re/CFFC2" target="_blank">Contest 5-Combined for all </a></li>
+                        </div>
+                        <div class="con">
+                        <p class="contest1">Contest 4: (24 Feb 2019) </p>
+                        <li><a href="http://hck.re/td11545" target="_blank">Contest 4-Combined for all</a></li>
+                        </div>
+                        <div class="con">
+                        <p class="contest1">Contest 3: (Code Friday) (25 Jan 2019)</p>
+                        <li ><a href="http://hck.re/CFCSC3" target="_blank">Contest 3-Combined for all </a></li>
+                        </div>
+                        <div class="con">
+                        <p class="contest1">Contest 2: (17 Nov 2018)</p>
+                        <li ><a href="http://hck.re/cc21y" target="_blank">Contest 2-For First Year </a></li>
+                        <li ><a href="http://hck.re/cc22y" target="_blank">Contest 2-For Second and Third year</a></li>
+                        </div>
+                        <div class="con">
+                        <p class="contest1">Contest 1: (26 Oct 2018)</p>
+                        <li ><a  href="http://hck.re/cc216" target="_blank">Contest 1-For First Year </a></li>
+                        <li ><a  href="http://hck.re/cc127" target="_blank">Contest 1-For Second and Third year</a></li>
+                        </div>
+                        <div class="con">
+                        <p class="contest1">Preliminary Contest: (1 Oct 2018)</p>
+                        <li class="links"><a href="https://www.hackerearth.com/codeshows-preliminary-contest" target="_blank" >Preliminary Contest</a></li>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="clear"></div>
+              </div>
+
+          </div>
+
+          <div class="subcontent" id="tutorial">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                      <button type="button"  class="btn btn-info sidebarCollapse">
+                          <i class="fas fa-align-left"></i>
+                      </button>
+
+                  </div>
+              </nav>
+
+              <div class="container tutorial">
+
+                  <div class="list-groupp">
+                     <div onclick="showtutorial('tutorial1')" class="list-group-iteem" style="text-transform:uppercase;"><i class="fas fa-user-tie lefti" style="float:left margin-right:20px"></i> Tutorial 1<i class="fas fa-caret-down" style="float:right"></i>
+
+                       <div class="clear"></div>
+                       <div class="hide hiddd" id='tutorial1' > <hr >
+                                  <div id="js_1d" class="_5pbx userContent _3576" data-ft="{&quot;tn&quot;:&quot;K&quot;}">
+                                  <p>𝟏𝐬𝐭 𝐓𝐮𝐭𝐨𝐫𝐢𝐚𝐥 𝐋𝐢𝐬𝐭 𝐛𝐲 𝐂𝐨𝐝𝐞𝐒𝐡𝐨𝐰𝐬:</p>
+                                  <p>𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲 𝐟𝐨𝐫 𝐚𝐥𝐥 𝐲𝐞𝐚𝐫𝐬:<br />Step 1: You must use Linux (Keep backup before installing the ubuntu)-&gt;&nbsp;<a href="https://www.youtube.com/watch?v=TkKSyGjOdeY&amp;fbclid=IwAR03AnfAX0I0TbNjpKIMjMOlqc0VzAwX1wskLBHaoYvzS87iLbFBWPitRTo" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DTkKSyGjOdeY%26fbclid%3DIwAR03AnfAX0I0TbNjpKIMjMOlqc0VzAwX1wskLBHaoYvzS87iLbFBWPitRTo&amp;h=AT1qACodATQX4IzFbnaXizjXFuITlEKk41SnLlATWR1VYEQt3hFZ_WNluLPQedprKTOAoPf3J2DbDOWMWUNXsIWUiMc4KNv3w2Y0DRhRfopslS5Sbhfys84ZiXwLx30TXBv7c8CCuBh0XHLPWELtE0pKNCu2bzInJzFXgS60_auswJzs7bPEiTuAzekdRVRG5Vpc1vFyu2vbnjcTWe7MP27T7W0ziHkfQy0LMa_WcjNPLu_DNcJzKF40cVUXTyIDyZdMjt1zEOUp1wdwnxb3jRTA_kgM4Fbak5w3LVB-EhWjFnaW4M-bPhofYdJ4MMRIiKMPKfDjrv4U-lU8ZTaaega6EKODpk7odxIrklNJwicwa0A80fThizpXLlWU7TTa-dvYHV3l3JfuFNJmA8ziWb2p9wDfLw6yP2jcYKcr1ei1jRUIBkrNJsf15wcBzYRwDTxveCrMdNzdYgAAzooeLk_jf6yG26WWy1yV1QdgGnTredzXBM3LYRflHWmW6M7jHeZqRAYx0b150Rded6r_eaq0z_UzOyBOnwEDU0bYWBYKL9y1I4iSZz2ZvbNmgzTb8-D0yHnKK9ECmXwWs6RMueUe7OH2kQOYtSYj6nDHPTrpDHYxVCo_5iKPqw8cQaEmO00bg1FB">https://www.youtube.com/watch?v=TkKSyGjOdeY</a></p>
+                                  <p>Step 2: 𝐒𝐞𝐭𝐮𝐩 𝐜𝐨𝐝𝐢𝐧𝐠 𝐞𝐧𝐯𝐢𝐫𝐨𝐧𝐦𝐞𝐧𝐭-&gt;&nbsp;<a href="https://blog.codingblocks.com/2017/setting-up-sublime-text-for-competitive-coding?fbclid=IwAR2EZjc0cELRtiv4tToVZ64Ps2-KH4CDHpt7nRF-QhemNuMd0cVzHKtWmew" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fblog.codingblocks.com%2F2017%2Fsetting-up-sublime-text-for-competitive-coding%3Ffbclid%3DIwAR2EZjc0cELRtiv4tToVZ64Ps2-KH4CDHpt7nRF-QhemNuMd0cVzHKtWmew&amp;h=AT0jAlWJXI1Bvz38Re9HG0zgOMyWsnl6piR66U78zRZ-R5tRQ727NIhF4N2UZMOl_rbiEC1JIwoAYqtCd5JkfxFXQBC7vZzH41DmxGjn56OSt90eVM-zAjdOKhMMCftyui24Cu3ToVAZZRr7zNHOVWUotMGsJ-xiVMicCV20-yC6wAbtfy8q4rrxwwrVF1r6JmOPAD8kwAqZ_WQLe5DXQ138VK0k3r5TKarht17QFwQV1EH-4n-lSILnRzsBms8a1-Qmo3ygdrUEMAeFD9eOBRwqKmEVqrjcuqcWTfcGVsLuGBBtkx5Z4JFNTSFpBZlxlQsHloVoij9TgeeezWA5M67vhI1aTTeN4yRALZ-s1H_G5CPdhyA4U8GGayBKW87-B-vnaCdm-kePv2c6KaG2P_peHh0Thc3lDT8-Ag-dwHWEAXLNc-nyBYvGY0FreLd7lTj4yXgKMICUVCluLYpDxwp2TzR4FepXMWJUbud_o2i9gCZAsHVypJSj6EHE7qEII1HhyI93B9WpiH_NreqEt6lAuryLt2jiwM5N69vKOrvqaCdXye8oacs6pyFf8JNI0LZN4-lZO336b1Xf2IFSoqSBHYkVVNK9Z0qbm0Vl6JnY37AcRUmgvvBFgZPtwtgeXgnv_eqWiIjxCjs">https://blog.codingblocks.com/&hellip;/setting-up-sublime-text-for&hellip;</a></p>
+                                  <p>[𝐀] 𝐅𝐨𝐫 𝟏𝐬𝐭 𝐲𝐞𝐚𝐫 𝐬𝐭𝐮𝐝𝐞𝐧𝐭𝐬:</p>
+                                  <p>Following tasks to be done:</p>
+                                  <p><br />C tutorial-&gt; Deadline: 22 october&nbsp;<br />1: Practise on hacker rank-&gt;&nbsp;<a href="https://www.hackerrank.com/domains/c?fbclid=IwAR2mmJDpjNPN-hZV2-8EOBXLCunGCAnrn0Nt475cACROD7vCK9H1_8S85Qg" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdomains%2Fc%3Ffbclid%3DIwAR2mmJDpjNPN-hZV2-8EOBXLCunGCAnrn0Nt475cACROD7vCK9H1_8S85Qg&amp;h=AT2Fa_GKlzMIWStTgCUd3pgkds4K5oIStrwExkwM_jc0DAjx9bFi4yYOTJfQyRcNVE6vC81mJoB80RNEDLQFy6YHt4RkgwQTtmi3XuTvGHP39cCjFoABOVqk2I-wB75d6lWii19Mk_vAsz6rS8hpGIh93mYA_idQU0ZPH-WHTLTrTr8Cr2zoxUCU0Bh7-kx5aIkvBhUrjLCWV2o3ix8QJAHbu9quxe_nw4RmIXqP1id8xcGj9Iidje9gaLkgbAEgoONzvyRHC3AVX3ho4Fiv8bwQhUq-cGZsi09BV2_Pq0LsK1LcNJrT6xfTmKGR7NoPQ_dEHGgZsfwHGky_SXfEyOO0D40kVyrBRUK9qgc2U1aa8kxp6zQP29piHhDtEI8oipES_NRMri4I3yVdH_wHyDMEbkQkNSnIG1lba6Hl0qM5L8t-1w_wzVMSof0QR62vYbDajTte74oDt0cut_0Y4bJPQjBGlC7J-eIl09ImcxPQyKrQoMlO47_cMHcMuDnL-t9pq3TUiFwYfQRCzeIlh9FzvktNW3X60qnB8QV8b1P6O65ORkD8R-3Kxp4wLXx_vKR7ZE3HtgkuxW3oxlXHFKnwKijQblZvHTCm0VADV-OM1hNF23C4tzCwYOsffHOenTngmeNM">https://www.hackerrank.com/domains/c</a><br />2: Book -&gt; Let us C (yashwant kanitkar) [Available online as pdf also]<br />3: Youtube tutorial: (Compulsory*) (58 videos complete/ Daily ) videos&nbsp;<a href="https://www.youtube.com/playlist?list=PL6gx4Cwl9DGAKIXv8Yr6nhGJ9Vlcjyymq&amp;fbclid=IwAR34T33j-roZ6JdBeE5e1QAoTM20dcBPgvgWqWnSbWv9yXD3A4ljeFeKiMw" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPL6gx4Cwl9DGAKIXv8Yr6nhGJ9Vlcjyymq%26fbclid%3DIwAR34T33j-roZ6JdBeE5e1QAoTM20dcBPgvgWqWnSbWv9yXD3A4ljeFeKiMw&amp;h=AT2txhtYB3J5ZwpjCP5-Nt0iz-H7PZobm3s44egs0BDMc82brO3GKvinwmgP46KDCmuEiZJct_ofXeslgNFuc0Nyf2ILhSk7vUA3I6Nr1cQd6wSGu2RaQ0NGvdX8yGP1ARU_cnRY7ors6-M7oYPC5XN2crNhXMjVoNudr_CGvyKSex977IKsqtyFTQba9LY6-VHIXM2q4QarAJG6L1VXVDWHQWpH9RvSn-gjVEbyg1GU1iSgIAgoumQ74H0g02rc5juEDWRNTGFSFvIZh3n_SyfpJ1P32eFD9mICx6ezfqvFdFllcxGp4pfnhowai8LK3BHr6HwZyYMDIGoGUM5ADD1W5RE7ATVS1LqKyN58tP3EmiiawQPNATr7kjI84-dl9M7i8pQ3G7Qv7Y3W5VKUAdCMne94Xh_zN8En7T6Os6BKm4cDf9xkO8SdBHwi9KVU-izrbE8SAsFxtxCa0k2Y8BmUaHsDjox-tI7as1nMPkuHYZJ6z_1iX-69hw_0INaTF65S_0Jsm4VY4TWdTIMor9cflGpLjPX_a3aWv0a_D8R8A7pj3OCU50v4CWWmtyHXPCA2rPTNENDLNHwVdpkmWzPNDuwnSPzULMoLLjFFl_MVsRP2ieZyL-m5I6kMUx-TBWJ8QMSs">https://www.youtube.com/playlist&hellip;</a></p>
+                                  <p>=&gt; Make account and Practise on coding sites:<br />1. Hacker rank<br />2. Codechef<br />3. Codeforces<br />==&gt; Start practice (Beginner) section on all theses sites.<br /># 𝒀𝒐𝒖𝒓 𝒄𝒐𝒅𝒊𝒏𝒈 𝒂𝒄𝒄𝒐𝒖𝒏𝒕𝒔/𝒑𝒓𝒐𝒇𝒊𝒍𝒆𝒔 𝒘𝒊𝒍𝒍 𝒃𝒆 𝒄𝒉𝒆𝒄𝒌𝒆𝒅, 𝒂𝒏𝒅 𝒕𝒉𝒆𝒓𝒆 𝒘𝒊𝒍𝒍 𝒃𝒆 𝒕𝒆𝒔𝒕 𝒐𝒏 26 𝒐𝒄𝒕𝒐𝒃𝒆𝒓 𝒂𝒏𝒅 𝒇𝒊𝒍𝒕𝒆𝒓𝒊𝒏𝒈 𝒘𝒊𝒍𝒍 𝒃𝒆 𝒅𝒐𝒏𝒆.</p>
+                                  <p>------------------------------------------------------------------------------</p>
+                                  <p>[𝐁] 𝐅𝐨𝐫 𝟐𝐧𝐝 𝐲𝐞𝐚𝐫 𝐬𝐭𝐮𝐝𝐞𝐧𝐭𝐬:<br /># (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲*) - All 1st year course above should be completed by you.<br />==&gt; Complete Data stucture and algo tutorial:&nbsp;<br /># (Learning Resources- 8 topics) (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲*) -&nbsp;<a href="https://www.codechef.com/certification/prepare?fbclid=IwAR22BqHESbJbXvaYklJfOJf6L3rkdHgYP8Zo_SV7PDq770MVwMYCKHe9Z5c" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fcertification%2Fprepare%3Ffbclid%3DIwAR22BqHESbJbXvaYklJfOJf6L3rkdHgYP8Zo_SV7PDq770MVwMYCKHe9Z5c&amp;h=AT1ghWb5aBxV_ybsNnFg9Ar3sli00e_XIglAqh3nKUPBfVC5rWVwwm3gd_uW194tz4xp5ztW0WfVKCFHlQ_0huLI4o-pE4s4OeQ7iauozF2NjeQ6M-6QR7yu6w_3y6pLqLYfWN-hAdPFQDhHJH6gWXf1u_SSOh78-kot_k8H8mFn05O_BkcqkPhXQQHBLXySMgHG-Bmn4-Qt5BMQY55mxtr9SBpg_50iWN2bKEqApak7EbmJyTWzIyETVvM7z8hcpzL5IITCk9l9HO_HAr9U_TKJ2W9zK_H6QihQ-9xgpRccBBbL5GaUSIWJILIKj3YqXX3geAGRGJC4GV222L1RKCsvomQbJgqs3_SUQLJki_pPodEcanxsTPuHsYOjb5b51eAVYgdBwgAFT3McP4NVmPSg1nuF-PFmk_o2RrmYvB33B7epxicUtBXbzm3ZWI32FWSN4i79ca4w7CEp7WkPNTmXJ-Rp9Kqp9wir9FFBORpx7Uqwx8qLP4Fuma9CY6H7OoY3HtrhiJt7BQo4vlugR127jIpVvOXEeCgNBe7DkkboajIcg70d_MM8Tx0mSm5KsOQwT5ib1MieOplRcLIAl9IQkY0v4-U7OC4lxjxIYypdpoGKBcfCec8WevII7dZ_58Yd1bLp">https://www.codechef.com/certification/prepare</a><br />==&gt; HackerEarth data structure tutorial: (Compulsory*)-&nbsp;<br />-&gt;&nbsp;<a href="https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/?fbclid=IwAR3PSCMYPzkrzD1dh8otbs8rL2ucITyx0QFwbdR5nIxD7gbN_Sixnt4h0bQ" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerearth.com%2Fpractice%2Fdata-structures%2Farrays%2F1-d%2Ftutorial%2F%3Ffbclid%3DIwAR3PSCMYPzkrzD1dh8otbs8rL2ucITyx0QFwbdR5nIxD7gbN_Sixnt4h0bQ&amp;h=AT0rXLA5hcK-hBzkpDptxIvYMejDo5VB3BXconHsodFRXcnHC8tmjsexNgaRbtd9j9mwsjeBB3HPOOaaaU8veNnddJdyl5mVQcq-jmGPxEsQOmBq-G1AiE3LhlmZipZk6dJwfHpELz6GaVoxoPG5d3To4LdjCr3o3DAE4QXdTiUiFYaL_cxWDgCdr4Fj2Ch4ApGsiPLOK7_rherISD5f2iIlRcMSTWhrenRaLn9S2ZYn5vF8qw7E_y2fOKcQoFuUJHo2Tk3Bkw-cieQfg_AerR2MTclSOEIynVPaOMSxGx4iiPgOGpma0eBmyWHvrBk6h40rxTNLY98bibKk9_OIF307wvMYyEhzGp4iTGnCKkvS_2Hd8rdqAZrllfk8Eh4EeTmKc98kxSh3ddIVn2GYgbdvODmxkWFfisD-A5bAaugN60IwWlOI6N4BXk7pqflr1EAqbYscKWrjKAerFUMZOu8pveCgvNT8d625h6Ic-OvKP-nZMYjNQXB8Sak4ApSs6j7STvwN457irIEY3_xlqqMydQjk-7-Fls-qvdBr-yV2iLzdgqZ63hOrVmYVWSdGMfSvwl0NQ5wbk41W5WfI6eTRv-mR6F9h7_4t34ldk2bJSi-C33FSvTU5yvzQV3grlwHy41Ux">https://www.hackerearth.com/&hellip;/data-str&hellip;/arrays/1-d/tutorial/</a><br />-&gt; You have to complete the tutorial<br />-&gt; Practise problems in this link as much as you can (atleast 5 questions on all topics)</p>
+                                  <p>Resources:<br />Books:<br />1. Data stucture and algo (made easy)- Narsimha karumanchi&nbsp;<br />2. Introduction to Algorithms - Thomas H. Cormen<br />Youtube links:&nbsp;<br /># (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲*) - (Narsimha karumanchi book video)&nbsp;<a href="https://www.youtube.com/watch?v=YWnBbNj_G-U&amp;fbclid=IwAR14D4zU5u95hn0ktsVLU0mFTjDZqXIqp8ltQva_nHGAWfs2_iE72L5hWUk" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DYWnBbNj_G-U%26fbclid%3DIwAR14D4zU5u95hn0ktsVLU0mFTjDZqXIqp8ltQva_nHGAWfs2_iE72L5hWUk&amp;h=AT34fPGDlgh1ArFYcuFlf-EvVdYTo-egirfshOB0wIGyxmLb9Fv5WW6U9fB3NIFIEIYT0_4_HPf5ym7TK6JqYSujWVPcXsVlWLM3OKyWcTGhRLv23IZ9YwMcFhaM_xdzQq8FZ2DfdbJ5kkFubi2F4ETFlW-d5CJAp3oZ3Oas4yWyGDLatqj7F55i4GJjOcdibGB5p55oqADU-qkHK_WLeS5d2tmnf6tixRFrvm82suUSYvv2glcO0jHCD2BgVKqVM_6OkIu6Rup-p9XGFh-kfF_EfLTwZz3HImSzCYDwkNbmHiQvsmLQfd2TjIFs33RkvVbbUVZEvFbL3XVbhAz80Ja9RR3XzirOLW80HehbcmQW1ZU3xvVvosiH-DO-mJd8JMmpoT7rf4SfNl53UvuHI4fgVsIm6AXvknHmyNubzdkrqghymEp4wV6A2NqJXEkgRKk2DCfjDrgPNzlSOAjjd0IgnJY4NHa6DiraVCK6WuGEvRe0vQZPmOQSy4WNkSK1nJ2HU0fEORVJcJIqlhjUIXAhyfCVTHHjwWtG4WiVblLVRv_5hc7niFb2-2-WQf1nMHYmKyP772iEToXq2m_PtYxBAy6651Qqsy-waHCSd9yaI663xobkGjS-qb3QudYXCozrq4Wo">https://www.youtube.com/watch?v=YWnBbNj_G-U</a></p>
+                                  <p>==&gt; Practise on coding sites:<br />1. Hacker rank<br />2. Codechef<br />3. Codeforces<br /># And it is compulsory to participate in all contests on these sites from today onwards.<br /># 𝒀𝒐𝒖𝒓 𝒄𝒐𝒅𝒊𝒏𝒈 𝒂𝒄𝒄𝒐𝒖𝒏𝒕𝒔/𝒑𝒓𝒐𝒇𝒊𝒍𝒆𝒔 𝒘𝒊𝒍𝒍 𝒃𝒆 𝒄𝒉𝒆𝒄𝒌𝒆𝒅, 𝒂𝒏𝒅 𝒕𝒉𝒆𝒓𝒆 𝒘𝒊𝒍𝒍 𝒃𝒆 𝒕𝒆𝒔𝒕 𝒐𝒏 26 𝒐𝒄𝒕𝒐𝒃𝒆𝒓 𝒂𝒏𝒅 𝒇𝒊𝒍𝒕𝒆𝒓𝒊𝒏𝒈 𝒘𝒊𝒍𝒍 𝒃𝒆 𝒅𝒐𝒏𝒆.</p>
+                                  <p>***𝐈𝐧 𝐧𝐞𝐱𝐭 𝐒𝐭𝐞𝐩 𝐰𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐝𝐢𝐯𝐢𝐧𝐠 𝐢𝐧𝐭𝐨 𝐲𝐨𝐮𝐫 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐜 𝐟𝐢𝐞𝐥𝐝 𝐨𝐟 𝐢𝐧𝐭𝐞𝐫𝐞𝐬𝐭 𝐰𝐢𝐭𝐡 𝐜𝐨𝐝𝐢𝐧𝐠 𝐬𝐨 𝐛𝐞 𝐩𝐫𝐞𝐩𝐚𝐫𝐞𝐝.***</p>
+                                  <p>------------------------------------------------------------------------------</p>
+                                  <p>[𝐂] 𝐅𝐨𝐫 𝟑𝐫𝐝 𝐲𝐞𝐚𝐫 𝐬𝐭𝐮𝐝𝐞𝐧𝐭𝐬:<br />==&gt; (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲*) - All 1st year and 2nd year course above should be completed by you.<br />==&gt; Make github account within 2 days.<br />==&gt; Git courses:<br />-&gt; Video:&nbsp;<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLGLfVvz_LVvQHO1PfyscjIPkNJjgHsLyH%26fbclid%3DIwAR1IDXX_IHNzzIdnv3gYbWPB_qUxlZHvHpP7NvAzZdaX9z6EAoS698c6ZxM&amp;h=AT2t8SUVNICUdXWNrNf90DP7eg-RnmOmvsSvpFn283AjF3CRxfjv88LBj4YOcFzXxEWBSDbem5zNRoG6f0M8UT1j635isLAn_pXVoJxSMSsT8-xe4sy6wYf3L3mK0j8AbPEKIgt1iELV2FyosXGpcLQvR89e1Gfk-F7o27NWJOrkAfrsqZ494Jik8jIKlpJl61Ygc5N-AwM5rsuCyD6cnwPnoSBhDzHLH857H_HN6zgmHz3L2-nc-PFfZps5FNBykxSN8UikssgmAClaJ9NbcJCXVj-76BpHgHoNQpb8wwtipS34ykjVs2T5B8o2Q2X_V86RUtH7nC1s2-y7hQ7vON3HpCxjVEtkzYJjtnuqUao1oQFdfs2QUpkYnm7QnJnoS7S-dpyBVLUNoAH-IsW2QFZhc5Lr1xXeS-972vghxaQ9KFS-yvpw-smcMwo47kn3cV2oUv5ryUU_hU2z1LiYqHhaZAeUFbF6aPE7TF3Cgnaum8IHgi8o-7_cDRqZ04styn4ppAHkD62IEKUk3yFh3oaKQm-d8nn1Nf_WXLDosWkdyZQWWj-ZOZUfykNT30Yk14V7W7NRlPG6Pz61wIgIgKd9WZx9B2feHEaXNX2ExD06d8jTJWFThrbxgOx4k1EwJTEU1S9D" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async">https://www.youtube.com/playlist&hellip;</a><br />-&gt; Interactive course:&nbsp;<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.datacamp.com%2Fcourses%2Fintroduction-to-git-for-data-science%3Ffbclid%3DIwAR098iXm3GlR3a0MaAOhA9h4L_PF7iQnVn9u4IwZVQ1Z-Q9NwgKQmrmu62U&amp;h=AT23bZpd_n2nhfN2mnjA_n-ECSa-2KI9xGsevxs6hyn67-fDJzGiDS783hdg5RA8H7y3JtlQbMKgB8az5QXcc1MPW8e3926S0eScyYL2k5Miz08GE_oQPr07Fre55BRik9KyB1lEPwZYmgA5flzLF93ViGHvbZmU3aamNnYXmBI3JWyd6uF5PWSHycz-MMEL01mm3IW0YHSinnRde4nKrFNkphhEjwQ36ViFPuRLitbPAy2MRgvtAbgZ11P8AcZZttsYzh-0p4j0_XK-FlVrbzrzlWfPbCrRADUluz7e52L67HhtmkxeoMRaASuq23C3ZtultrNOxe30olbo20BKzto_s1wvyiCdjRcxePJK0cVAGZFXBidRaPfB2KCpbD4OKAUzeYI7blR-wfP8LrwJQQdzn5MNIlMrAQ9wdKG7k5GOO96Zxt-ai4RCk78Q_riw3JXLTjahGL7Rj9O81ZXswYRXFfgOunjGnZSejPOsyLkkNfmThVQq7ELurGs9TrrfUNW6Vrb-xnjaaKQz3TymSBc0iG1vys8Q3nom4Et20gmT9KV_nRrQujKrTZZAPvXLCz1pDVe_QGfhh3BNpYzuFZDOLrOqkzjALkcHuhF_ejU35_IrlCLZnHmsg3QofrGElKip5Sd6" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async">https://www.datacamp.com/&hellip;/introduction-to-git-for-data-sci&hellip;</a><br /># (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲*) - From now onwards all your projects (even your academics) should be developed with github.<br />==&gt; Your github accounts will be checked.</p>
+                                  <p>==&gt; Java Basic- Tutorial:&nbsp;<br />-&gt;&nbsp;<a href="https://www.javatpoint.com/java-tutorial?fbclid=IwAR3X-VkyNj3tOrBtyMdiiV4QHXdyTyU9iJvIf9ij4NWcKlIHXXANLIfmdM8" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.javatpoint.com%2Fjava-tutorial%3Ffbclid%3DIwAR3X-VkyNj3tOrBtyMdiiV4QHXdyTyU9iJvIf9ij4NWcKlIHXXANLIfmdM8&amp;h=AT0NbtY7NCJHm04MsOLnEK9GDgxNjC09kWPfYYE1esHKflt1wpYRkqBjQoucJLsfZ3YVKFhnDaVxbBkpxq_JtIC_Vba3bbmeo8bbV40zYtp-KRAY31sTo1TJhVjYSx9HV17hZQjkaByKUpcLgx2WnoQAMCprk8W74J3kDXTFnb1Wyo2YgK0ecayXzhePj4cTTXkK3oAFMDV9qKohjNf9klbYl_Ev5DGsl_UyyllArwUkmHltr3og9bp_xsWR0eL8t6uX6l_7p0LXkbZ3Rznf9ZBkY7h2Fyq1QIc8jpBkZ0vTEW-bnLWKHWoiAQwypw0SDA2YR_hJ4GKOdYBrZxCaRkWwwayANB_Elthava9iLcTjOeiuewK0WtFgwZaQ6t97W3P53dGqWrC47bTnrWXw3URG6pbbXfQywQHgWAjrpZ6Uaq4__-UlU1k9Nvvr2ZcXJn9McQlO333WzjCZ3sxxyDt_nCZYHvP3SRK1OCM8AN__zeYRlF3_GIinVZoueO_vxNDrMUBZkPEB5xW14gxj565zIvBHUt0_UdP7Kwx_tsNaZpbphlu80uixH1WIvO7nXRJYxmIHcHt6n0Yz2E2Wa9oahjWHatawXT7ihReQ5q5aFAa9Ou5LqS4ZwaPpjP-vdyaNdMEa">https://www.javatpoint.com/java-tutorial</a><br />-&gt; Youtube:&nbsp;<a href="https://www.youtube.com/playlist?list=PLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al&amp;fbclid=IwAR2tTWWaPV-UyHq3o8ad5nmjYXY3-l0bD16A7Rlcd0Gzwdn9TLA9IHIlIz4" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al%26fbclid%3DIwAR2tTWWaPV-UyHq3o8ad5nmjYXY3-l0bD16A7Rlcd0Gzwdn9TLA9IHIlIz4&amp;h=AT0n6FVBv08c2zGgxlaDSdKPUOD6EE_-lcJjuEizEY80jzCLq19PlQ5I1-lqc7MUP5_lRLV--3vGfw2wRHnTnHSqLQL5IeauTQNZYP3y9Kl8Hf-8rbCMTn5n03XUCyVpP6661lFLaOCYyfc6Iyc-y4OHxEZI01M-pXkxf60KzYufemLil6D6RlZiCxdwu7wHW6H7Dj5iMPRhV3Y5BMRcz6LM7Y_feb5ZfxAtV_JROr0tyBkV2BkKvl1i4j647D1hKfYb7-2-Meec4YM6bNkGbbZhY2nHIsD-MtMoTSblb1cmuHVXxq8ViqUthl2XXjAhjxLrP3ILkOLIe5GAZd92pQs8f-QuV2dIyL6zYS46eGO1b0GTceHo1CgKwITz28gazDEzet_AlFW5cFc3XIruPLqt9Jmca-_GIZzsxzOFPvlGWv0gurSqUWfDOBkdrncojtm74tfwIDWzWFiuVD_wGc50aTXvgO1Zln230cWfD9i5J-o9lK0tQxssjPyxmusHKuczQvK5DPAy22usUW-qSvCzOoFQqLm9iHseQDzhhete-ursaCUT0q8XqaU1zFNoaumswiBEl5TeL_qlcmOyxb-c4CQUjESlnkfdzsrWLpq7q7YjpVIiSJOaLF8QQlKqERkA1P5_">https://www.youtube.com/playlist&hellip;</a></p>
+                                  <p># (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲*) - And it is compulsory to participate in all contests on coding sites from today onwards.<br />==&gt; 𝒀𝒐𝒖𝒓 𝒄𝒐𝒅𝒊𝒏𝒈 𝒂𝒄𝒄𝒐𝒖𝒏𝒕𝒔/𝒑𝒓𝒐𝒇𝒊𝒍𝒆𝒔 𝒘𝒊𝒍𝒍 𝒃𝒆 𝒄𝒉𝒆𝒄𝒌𝒆𝒅, 𝒂𝒏𝒅 𝒕𝒉𝒆𝒓𝒆 𝒘𝒊𝒍𝒍 𝒃𝒆 𝒕𝒆𝒔𝒕 𝒐𝒏 26 𝒐𝒄𝒕𝒐𝒃𝒆𝒓 𝒂𝒏𝒅 𝒇𝒊𝒍𝒕��𝒓𝒊𝒏𝒈 𝒘𝒊𝒍𝒍 𝒃𝒆 𝒅𝒐𝒏𝒆.<br />-<br />***𝐈𝐧 𝐧𝐞𝐱𝐭 𝐒𝐭𝐞𝐩 𝐰𝐞 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐝𝐢𝐯𝐢𝐧𝐠 𝐢𝐧𝐭𝐨 𝐲𝐨𝐮𝐫 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐜 𝐟𝐢𝐞𝐥𝐝 𝐨𝐟 𝐢𝐧𝐭𝐞𝐫𝐞𝐬𝐭 𝐰𝐢𝐭𝐡 𝐜𝐨𝐝𝐢𝐧𝐠 𝐬𝐨 𝐛𝐞 𝐩𝐫𝐞𝐩𝐚𝐫𝐞𝐝.***</p>
+                                  <p>***𝐀𝐥𝐥 𝐭𝐡𝐞 𝟒𝐭𝐡 𝐲𝐞𝐚𝐫𝐭𝐢𝐞𝐬 𝐚𝐫𝐞 𝐫𝐞𝐚𝐝𝐲 𝐭𝐨 𝐡𝐞𝐥𝐩 𝐲𝐨𝐮 𝐢𝐧 𝐃𝐁𝐌𝐒/𝐂𝐃 𝐨𝐫 𝐚𝐧𝐲 𝐨𝐟 𝐲𝐨𝐮𝐫 𝐚𝐜𝐚𝐝𝐞𝐦𝐢𝐜𝐬 𝐩𝐫𝐨𝐣𝐞𝐜𝐭.***<br />------------------------------------------------------------------------------</p>
+                                  <p># Note: Editorials of codeshows-preliminary-test will be published soon.<br /># Stay tuned to this page-&nbsp;<a class="profileLink" href="https://www.facebook.com/codeshows/?__tn__=K-R&amp;eid=ARBK3Y6Dc_qLwBm6KnFr-QZnL6v_N7iptAwLqgSw3oTVOB_55Xd4ZRr_v2ibAY5b7GH6nHfm_dVObECz&amp;fref=mentions&amp;__xts__%5B0%5D=68.ARCTz03pXQR4TeZJ9T6BfpTCZ201xenwk5iDxe9EZxUuleHuPFrm_qmHlsAX5SpvCIhDWGZy9vAUh01eoUA1W7TCI7iOKXr-GWrKPUvHoL4rTkS-SZMqFI27DI6hJMu6mFwUi9urxsFMOF-dlllZ4AY5txSs1PyBSavPs0SGOu_YLWfiwv7w0CWPmO14Fyf3JJUGbuRhCIdHuahFExJ9ME_kdaGOnnyTrGlzf5wJBZhPcutUPFflde6LQVOxcvZFfVWjUIbQ1J3j0Ovqetw6JuTR0Xf4EzmmzmawbyKId7ZmCnue7hr7JsD8PLtPHWR1AYJRCE6nBNLRE4CjBle_AjaNxpJ_" data-hovercard="/ajax/hovercard/page.php?id=1522366601197808&amp;extragetparams=%7B%22__tn__%22%3A%22%2CdK-R-R%22%2C%22eid%22%3A%22ARBK3Y6Dc_qLwBm6KnFr-QZnL6v_N7iptAwLqgSw3oTVOB_55Xd4ZRr_v2ibAY5b7GH6nHfm_dVObECz%22%2C%22fref%22%3A%22mentions%22%7D" data-hovercard-prefer-more-content-show="1">https://www.facebook.com/codeshows/</a></p>
+                                  <p># And join the group for further updates-<a class="profileLink" href="https://www.facebook.com/groups/297263240862680/?fref=mentions&amp;__xts__%5B0%5D=68.ARCTz03pXQR4TeZJ9T6BfpTCZ201xenwk5iDxe9EZxUuleHuPFrm_qmHlsAX5SpvCIhDWGZy9vAUh01eoUA1W7TCI7iOKXr-GWrKPUvHoL4rTkS-SZMqFI27DI6hJMu6mFwUi9urxsFMOF-dlllZ4AY5txSs1PyBSavPs0SGOu_YLWfiwv7w0CWPmO14Fyf3JJUGbuRhCIdHuahFExJ9ME_kdaGOnnyTrGlzf5wJBZhPcutUPFflde6LQVOxcvZFfVWjUIbQ1J3j0Ovqetw6JuTR0Xf4EzmmzmawbyKId7ZmCnue7hr7JsD8PLtPHWR1AYJRCE6nBNLRE4CjBle_AjaNxpJ_&amp;__tn__=K-R" data-hovercard="/ajax/hovercard/group.php?id=297263240862680&amp;extragetparams=%7B%22fref%22%3A%22mentions%22%7D" data-hovercard-prefer-more-content-show="1">https://www.facebook.com/groups/297263240862680/</a></p>
+                                  </div>
+                       </div>
+                     </div>
+                  </div>
+
+
+
+                  <div class="list-groupp">
+                     <div onclick="showtutorial('tutorial2')" class="list-group-iteem" style="text-transform:uppercase;"><i class="fas fa-user-tie lefti" style="float:left margin-right:20px"></i> Tutorial 2<i class="fas fa-caret-down" style="float:right"></i>
+
+                       <div class="clear"></div>
+                       <div class="hide hiddd" id='tutorial2' > <hr >
+                                <div id="js_1d" class="_5pbx userContent _3576" data-ft="{&quot;tn&quot;:&quot;K&quot;}">
+                                <div class="_2cuy _3dgx _2vxa">CodeShows Team now have prepared Tutorial-2 for this Semester. This tutorial will be bit more lengthy and one level up. Make sure you complete all the tutorials before deadline, else you will find successive tutorials much more difficult to complete.</div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa"><span class="_4yxo">Deadline: 16 November, 2018</span></span></pre>
+                                <div class="_2cuy _3dgx _2vxa">Further Tests will have questions directly related to these tutorials.</div>
+                                <h3 class="_2cuy _50a1 _2vxa">𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲 𝐟𝐨𝐫 𝐚𝐥𝐥 𝐲𝐞𝐚𝐫𝐬:</h3>
+                                <div class="_2cuy _3dgx _2vxa">1: Complete Tutorial-1 before starting this tutorial.<br />2: Watch these Videos for <a href="https://en.wikipedia.org/wiki/Competitive_programming?fbclid=IwAR2rV1m5WX2H1kQzu_6XTpqnwKeRwMQWVIUrmaCegid0JoQbh0GKqyr7BVU" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCompetitive_programming%3Ffbclid%3DIwAR2rV1m5WX2H1kQzu_6XTpqnwKeRwMQWVIUrmaCegid0JoQbh0GKqyr7BVU&amp;h=AT0H1hz9A33WNrXPpw3jgAEjtC_xX6KIgYsuqcU8McxCQvaXeg8dkRHPdLniEeXyE3s0swza04uLGqakZ3-gKD5QiWRELO2D-lCF82WCFK49qfTOquQNnyLVMKCmOqNgOlb2Yg"><b>CP</b></a></div>
+
+                                <div class="_2cuy _3dgx _2vxa">3: Setup <span class="_4yxo">CS50 IDE</span></div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">1. Create account on <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.edx.org%2F%3Ffbclid%3DIwAR1OA1-H03XodojeJVmlynPfFgNHywgZoVMeSYDlprRVdJFM6W_z0T9Ifs4&amp;h=AT0e8Gb3lDgB-1WebBRE17y1FYaKwjEdfDabzMhXceFUq3xf9CKl9vwebn8XaAnBbIl_33nV-ZW-5aPRim7AzPDnHZ4Rrbx19hyYo4NSzudB4_nbdXMlDJ4wC0owQSxKoJhgGQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.edx.org</a><br />2. Open <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcs50.io%2F%3Ffbclid%3DIwAR0Erq1k36zXrjtXlHai67Jh1VYplbsYEx_aK4FQWHUHw0xFXrLe3B3Fy2M&amp;h=AT0jaNCOgSRpC608LRjfKSGGnKgVYbVYSzi30RSQ9iKw2zvAtF0XdV87H5F59jPyb6H8jSIGuE30JSNJlkxSQuw0cGhgfMHiBtXErFsccaP6UnvOA2VhBnCBqZvotu-6k4KjEA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://cs50.io</a><br />3. Log in via edx and press GO<br />4. Your Virtual Ubuntu System is ready.<br />5. Watch this video for more info <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DtEjbe85aZT4%26fbclid%3DIwAR2zkd1kEACXP4-bcfqBoyn0HmysnkVlQbh_aMbljFFk9lhW9H92odtqPwE&amp;h=AT1BEPAXCFIVY2TnK_B4tARn2cnaJjYG7I480ordzROmND6IsMlJ0JyadoEOmQkkdzA1VIaILzNiV_rjUUYzZ3cFbjxClvlVf36zpTXxQNj-UP9Hc0FZUlql4VkpPAVFEhdJ1A" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=tEjbe85aZT4</a><br />6. From now onward you must use this IDE for all your projects.</span></pre>
+                                <div class="_2cuy _3dgx _2vxa">4: <a href="https://practice.geeksforgeeks.org/courses?fbclid=IwAR3wYlyH1OgJO38zpX45Z87-zDNWoCkUi1zb56C5FmPtFPDiUJKqDfVM3Eo" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fpractice.geeksforgeeks.org%2Fcourses%3Ffbclid%3DIwAR3wYlyH1OgJO38zpX45Z87-zDNWoCkUi1zb56C5FmPtFPDiUJKqDfVM3Eo&amp;h=AT3hI2VttV4XvO0zz_WQb-lw9uz63jhKXOkjK39yMYHg3vIpLyEW9R2cyWYcwatYFobus3fc07KyJU3fPqqwuPQWlVCcj6MLG1KlXYtnfrqsMaOu7vZ6dRsTU3SzC3EMxrCoYQ">geeksforgeeks courses</a> (starting 14th November)</div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://practice.geeksforgeeks.org/courses/fork-cpp?fbclid=IwAR0eNsxp6hNFxiSJ_M2Lf0AuVIq8Q9Qs0YcEkN8JAQtusUAp2w4dbGdQw_0" target="_blank" rel="noopener nofollow" data-lynx-mode="async" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fpractice.geeksforgeeks.org%2Fcourses%2Ffork-cpp%3Ffbclid%3DIwAR0eNsxp6hNFxiSJ_M2Lf0AuVIq8Q9Qs0YcEkN8JAQtusUAp2w4dbGdQw_0&amp;h=AT01ymdGw68ovOXfKWhz7EqXg1F5R2jBRf2eII0w_uXamT44ScMW0-oi6Wlh8eHkC7qio7452peugh--7GS28laB9m7TVuUJrad9hPS3uaeyhdIo8GoTvpM_28SObUx1rlLLbLzrT3-To8WSHJw">https://practice.geeksforgeeks.org/courses/fork-cpp</a><br />B. <a href="https://practice.geeksforgeeks.org/courses/fork-java?fbclid=IwAR3WM4vZS-mSa81bzp0Eql73rBjZZrK0uvC1bjWTGoocqy2jJKCHNVIqbtA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fpractice.geeksforgeeks.org%2Fcourses%2Ffork-java%3Ffbclid%3DIwAR3WM4vZS-mSa81bzp0Eql73rBjZZrK0uvC1bjWTGoocqy2jJKCHNVIqbtA&amp;h=AT3p9V4IcAFqITD_v2ONv0pF2r4RgGmtjXfObUQob_LQ3H-xt8lTrifRAqzVqriaYjpZQfwSwv9EnTVA8y1Cv_QBo14aNTJiatN3LnX8Xqwt5zRG4TBNAFY2WUY2-dSD_clEbw">https://practice.geeksforgeeks.org/courses/fork-java</a> (1st year can skip this)</span></pre>
+                                <div class="_2cuy _3dgx _2vxa">5: Participating in All the contests on all the famous CP websites is mandatory.<br /><br /><span class="_4yxo">----------------------------------------------------------------</span><br /><br />Following tasks to be done:</div>
+                                <h3 class="_2cuy _50a1 _2vxa"><span class="_4yxo">[𝐀] 𝐅𝐨𝐫 𝟏𝐬𝐭 𝐲𝐞𝐚𝐫 𝐬𝐭𝐮𝐝𝐞𝐧𝐭𝐬:</span></h3>
+                                <div class="_2cuy _3dgx _2vxa">1: <span class="_4yxo">HTML &amp; CSS</span></div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fdefault.asp%3Ffbclid%3DIwAR3CluxHESsUxFQ01kQp6ttH0Eow9k3e_Jyoly0zUwrdvDmY4fbhI7vRFac&amp;h=AT1Cwrla1ZC9MrRahxeF6FkfqoXvn5wZFnQ02Ue1kswE6NBLn7ltxqoARl8EAVBDPzrGyv4HMvuHzMrrfxkg2zhxPSX0XS-QcV-c7cWOcMG2OZ3Mg-Pvsbe9MopFRMwXroCnTQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.w3schools.com/html/default.asp</a> (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲)<br />B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.w3schools.com%2Fcss%2Fdefault.asp%3Ffbclid%3DIwAR2HTW3mnkdDPRPUlTP4ojJBPntWHIRUjwrtpRu8ubgCL6sZKoZAUQmaJEQ&amp;h=AT2zzbzEz7yK6dR8yHtgZ7fK6tXKoX3md3KveWDA23FxQCKkLC2MgFK4O2xtETEU_4-UY28OSpDscMl5tyqIl76QJzINWw1c4bZwk9j79H34cxK_dJqfjWNVcPi2vKADJxWIlQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.w3schools.com/css/default.asp</a> (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲)<br />C. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7Ht_RW5PzQQ%26fbclid%3DIwAR1LNGpC_D8yn5NvqvIHw7SrkWszG798MWP4TebH9jx2lLrOcrLvaHg3HOw&amp;h=AT1biKqepkM0PIDbPaTPIHIheHjduQF0p3bJdSpIFan2u6fJ1paxYO6Zb2PrtLQeZPLN7OKcF4rcqlrH67C_KOYTaaIcXNQi3eLg8f7jjFAjaBufWScdHosROvvP0D2UbTn8UQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=7Ht_RW5PzQQ</a> (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲)<br />D. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DkW_LLGie3_8%26fbclid%3DIwAR0TwvofnNUURKv3OkMKIi0xS5ikaMRKyux2_DUZ_ms-4cws2h17rYY-I_g&amp;h=AT0zt-Nb_kS3nqVgvhuEnJ8pnGGU7s3KsTJ-4KRV9j32fviY07GNP71FEyx1d9EAnxWecRgh7fEqF3x0rPAn1-GJm6XRB7LOmIEXi-1qPAICSUBID15SRpqOO02Ci3nW6sXI7g" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=kW_LLGie3_8</a> (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲)<br />E. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.javatpoint.com%2Fhtml-tutorial%3Ffbclid%3DIwAR3C-R4FD81IX4IyVVz0X_DEbhFlac9BNLpcWqUfw3h88MrRBb3NYK0NWfo&amp;h=AT0sTy5p3OZwXfwjs3ACejHiz1waA1HZfHykcaRHjJT7W-b5rKQqz5CpV2MmwFDgAaVkdrAgvpfPpYXdRGDV9P5Fk8I2meBTTKjsnUUPaZ1hBpDEZAoR0gKbMKDTKx748Wk9cZSe9CL0UOTp3Gk" target="_blank" rel="noopener nofollow" data-lynx-mode="async">https://www.javatpoint.com/html-tutorial</a><br />F. <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fhtmldog.com%2F%3Ffbclid%3DIwAR11xMCngSs-pjf9VupCB9yffueULK5iPk-8mhI1f67NcXH5nD1S-0-DrZ4&amp;h=AT1bd5hhVrDc-5AtNiZH3kQ1oxRHvpMtQe9Ful7T9d7Es0h8P9HUqArUgRVz1xQx61wzUWUfcFMabILh1oNfkNvkBTOFM6-i5Rn1okIMTvqgUfOjhE7jZrYBVy73hWYLB3bDCw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">http://htmldog.com/</a></span></pre>
+                                <div class="_2cuy _3dgx _2vxa">2: <span class="_4yxo">CP (Competitive Programming)</span> (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲)</div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdomains%2Falgorithms%3Ffbclid%3DIwAR09pzULtel4z_E_auT0bJS-bDBdIGBiocXl-xvBOL51Wfblzt_UWaeT4mA&amp;h=AT19aehCkvA6LSoL-zzQnCXzIa8CyV8dQvsypVtU9uwvNYP8KfhxZtaTNt5xnagTN9K5RJ6MnsgMld92t3vPhrncBDFSf0UESJ0gmvxNytVGMliZYnZmbJW6s6APBzDEFYY_lw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.hackerrank.com/domains/algorithms</a> (Tagged with Easy)<br />    -Warm-up<br />    -Implementation<br />    -Strings<br />B. Continue Practicing Beginner section of all the famous CP websites</span></pre>
+                                <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">----------------------------------------------------------------</span></div>
+                                <h3 class="_2cuy _50a1 _2vxa"><span class="_4yxo">[𝐁] 𝐅𝐨𝐫 𝟐𝐧𝐝 𝐲𝐞𝐚𝐫 𝐬𝐭𝐮𝐝𝐞𝐧𝐭𝐬:</span></h3>
+                                <div class="_2cuy _3dgx _2vxa"><span class="_4yxo"># </span><span class="_4yxp">(𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲) - All 1st year course above should be completed by you.<br /><br /></span><span class="_4yxo">1: Technology</span> (Complete At least one section from these three)</div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa"><span class="_4yxo">I: HTML &amp; CSS</span> (recommended)<br />   A. Complete HTML &amp; CSS section from 1st year tutorial.<br />   B. <span class="_4yxo">Assignment</span>- Create MNIT website similar to <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.mnit.ac.in%2F%3Ffbclid%3DIwAR1fpHIBYnEwV8Z6CZyYf1bM_n6WcCLQ586AOWqlxY29eiu9egPFSirrRdg&amp;h=AT1xKWKN-2wmcAIg3B0ShPLXhDLyp4PVDXWwv-eLjD1MmGEb3z3fVBdIfSZQ8HQzZEpQLHzKg2CZ0_T2sGxP_DQlZB7E5b4FmvqDvs3YzB6tMDmJgsAod0EUNsmu35_mW-Na-Q" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">http://www.mnit.ac.in</a> (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲)<br /><br /><span class="_4yxo">II: Java<br />   </span>A. Complete 3 Sectins from <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.javatpoint.com%2Fjava-tutorial%3Ffbclid%3DIwAR0wJo3n1us90DIV7mK_ICu33bPnm92hxtj-JfPK67D9JcgSGlALSnN9Fb4&amp;h=AT0CT3xF8JoSyMyxn-el3WXhgmrtndNYKDIKonssTFL7etmV4txzhUuP12bGI7YeNRKY0Bx06auVLXF1ooaub8vmM5Lwcs5UUuaEXfqFK9nF5UkUyJ4a-u21W1kuW4FAvnmaTQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.javatpoint.com/java-tutorial</a><br />       -Java Tutorial<br />       -Control Statements<br />       -Java Object Class<br />   B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK%26fbclid%3DIwAR2mIRiAYGLqhsskvUpfSnLhrqC4G-kQBYYOP1_2p5loR_tc80lR3a68SM8&amp;h=AT1l72DNgpbU6LH_mibk-Oy1qruZXJE8Weg1uYjmDLRkRgb7TroLfHBRHBYpSYT5m9E4IkDI4dmC0GxJEzWWQS2p60Fne2GNUHMYBqI82Emkq8X2fUNdmy7jPN3sq8VyD5em1w" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/playlist?list=PLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK</a><br />   C. Book: Java Complete Reference <br />      (<a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fiiti.ac.in%2Fpeople%2F%7Etanimad%2FJavaTheCompleteReference.pdf%3Ffbclid%3DIwAR3-HdhtlQ14Uf9K-Uq9diHLBOd0VS22VNlJlWodBTdnm5uCepq1DZZvZec&amp;h=AT28oUf4lNpVSFK8WXcKvEVHX-F8xa4gBzy49FMgXXFPcaWV14BmglDu7tMGLmLdanfRvkJoaLosuZgH-P7WrkpeH5wVu1EmnLS-8GptYwM5GajpPe6bpMtnpbLQhe0jHLILxA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">http://iiti.ac.in/people/~tanimad/JavaTheCompleteReference.pdf</a>)<br /><span class="_4yxo"><br />III: Python<br />   </span>A. <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fcs50.tv%2F%3Ffbclid%3DIwAR0gxD-JhtLrWSOSvKCpBjIEV0BYZgj5ufwKiHssw4ezokKC5GvJo2zN048&amp;h=AT2QhAVlKVN2klTG8TzAsVJvJ-FrMBtVzwSMeLPz_4bpto8-qGQy-ATsuuF5ASICB3BSuJdptPj_StSK_u0MFf7GRfOF7K5a9b1qsSe0v7RpPUfT_aKyTwKtJh6AT7_gA9IY0Q" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">http://cs50.tv</a> (Lecture 8-9 and complete corresponding problem sets) (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲)<br />   B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.learnpython.org%2F%3Ffbclid%3DIwAR1RI8FpRHombZ8B4WFUN5tZuhQ-KR5m4bR76HKxXPFqvP-F24xuHSDPRX0&amp;h=AT2n5Oztbt4aFGmOlj5InsP3c0bURSNb8vBS1QLXCFNRFIxKMPHxxoypmVgJwlvvRbc2yuFJJXp5f3UKE1tBCkQEzjFnhU9orI9z_Tb0dYGZ5Hi_evIzO5IrRJHwGf8f9yf5gw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.learnpython.org/</a></span></pre>
+                                <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">2: CP</span></div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fcertification%2Fprepare%3Ffbclid%3DIwAR1N29nKue8bQNp52TWyJmr-XhxmknIVcfgxLNSBmagmRX6_n3o4QiwlA_w&amp;h=AT0kpN_RSpqh5P32gb8mdKSyi_JDjbjA8gvJTS5oy-ln1UBSl6vK4pgbux4jCTzzVgMLxnnoaRex1wwHhOfybXujFoBBUjcYW0P31kCDdEWAM_Q84_hwTGbA67iILkApHH6Pfg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.codechef.com/certification/prepare</a> (9-10 topics)<br />B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.geeksforgeeks.org%2Fcpp-stl-tutorial%2F%3Ffbclid%3DIwAR2WOOHNQQPOkrgdfHe0x3nAdLnXv9P7oSc9mOqWTtNVXZ6QMvH8AwdqjF4&amp;h=AT2h4somLKdHD0B_VRYDM9VvgFtVjCZapGHx5W57lS6kNC9OCM-bqqMW_dr2sI82cghojDRjpAb70PBm_7767HfRb10FJvaIU8zDmCfSFBNFol0pmKrCWE5s8gPUqO18jZiX0Q" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.geeksforgeeks.org/cpp-stl-tutorial/</a></span></pre>
+                                <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">3: CS50</span></div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fcs50.tv%2F%3Ffbclid%3DIwAR1WqFA2jkyjlikSjBUBE_tA0ey_BQWZE3b2AEU19x9DljslESivsv9FVjw&amp;h=AT2aOTWtyTKLw-JrcSZMdVg_IDLzhVkn6LJ4iu6cxtLA4r5N7g89s22DsrTJmSyTKAEr1f3JBvZ8np6YaKbd9X4lFITAC98QnRFulNxnp-quKhn3kGvKd6Pfl_fCQQDmXKelUg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">http://cs50.tv</a> (up-to Lecture 3 and complete corresponding problem sets)</span></pre>
+                                <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">----------------------------------------------------------------</span></div>
+                                <h3 class="_2cuy _50a1 _2vxa"><span class="_4yxo">[𝐂] 𝐅𝐨𝐫 𝟑𝐫𝐝 𝐲𝐞𝐚𝐫 𝐬𝐭𝐮𝐝𝐞𝐧𝐭𝐬:</span></h3>
+                                <div class="_2cuy _3dgx _2vxa"><span class="_4yxo"># (𝐂𝐨𝐦𝐩𝐮𝐥𝐬𝐨𝐫𝐲)</span><span class="_4yxp"> - All 1st year and 2nd year course above should be completed by you.<br /><br /></span><span class="_4yxo">1. Technology</span> (All sections are mandatory)</div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa"><span class="_4yxo">I: Java</span><br />   A. Complete 6 Sections from <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.javatpoint.com%2Fjava-tutorial%3Ffbclid%3DIwAR3YkAqKzJXh1MWDDC0VcmjzM9i34Zm9Nr1tcv0pdqzoM8Yvv7YIz_pDMoI&amp;h=AT2jL8cgBIdGZ0ohAFjencRPb_7FsZHpKrwpapPBoyNYESM38xFBa3mhWIMZnXDjPzGzfLaTOsWAzoYqdeDuR3Qk9ng9WYSHvmEVpTgl3WIQyck9Bsqu6ajshDgIRzm5G0aBkQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.javatpoint.com/java-tutorial</a><br />      -Java Tutorial<br />      -Control Statements<br />      -Java Object Class<br />      -Java Inheritance<br />      -Java Polymorphism<br />      -Java Abstraction   <br />   B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK%26fbclid%3DIwAR3CPdLFohGcpgfncgQ--5Ed9pGDFS4MceV57ZEoZIJjEGGyaI1XvXvqIq4&amp;h=AT0VuT6mvZQsLvPWpehOu-PG3Jb0QxmpgdWc6U3GmP0XsvGGHo1p7AOR-3lXKBW_AIVCTni0MXgs3uUNP-dMUkQJf-NASsjm6Sc_vTEEqgpgh8Jzdei4RB-fv-uli9m5i-T9pg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/playlist?list=PLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK</a>   <br />   C. Book: Java Complete Reference <br />      (<a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fiiti.ac.in%2Fpeople%2F%7Etanimad%2FJavaTheCompleteReference.pdf%3Ffbclid%3DIwAR0Q80hoN-ddHUT2cUR-XaidyfGJ15cuKDzAaS8Gib86hag25Frv_-GsLvQ&amp;h=AT1ktHd7H7C1jMLy-j9UqQ2J-GHzD67IcdwA36y2l1GGhUX6bAMA083lRLLAffa73b4rkXjYYP6pJH1ACYQ1qbeLYC71haD9MdUh4zjh-Pi0LgCeWyM1ECbWdfhTiB1rABANHQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">http://iiti.ac.in/people/~tanimad/JavaTheCompleteReference.pdf</a>)<br /><br /><span class="_4yxo">II: Python</span>   <br />   A. <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fcs50.tv%2F%3Ffbclid%3DIwAR0E_GcFR59IWuiItCzRoLAEa9HnbK-nLHPCJxhAlF9L99v9l3C7hLfWfOo&amp;h=AT1yFYi2X_k9xlID3rK8x1ry_SSO8_Y4sTHEegXHondtQ-N8iY6Oo7WBS-SqU_lSNApA5KYxVS0ptRHkERvKBHrFQcPNtB0yKFt1RuyLDAaT9Qh6_B9azHiwncCdq6EBYhTZ4A" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">http://cs50.tv</a> (Lecture 8-9 and complete corresponding problem sets)   <br />   B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.learnpython.org%2F%3Ffbclid%3DIwAR03tgSsmPRcoebWzGVcmWnU2PkAkmGC5SFLaaEgin4ek0OxSsFyEqkRNCQ&amp;h=AT06nx508rEcDI9hvbzP05bTYuAN5Uz7av1D18mI5xWMGJ8itRaiQ1GNTv40AGvuJRcrGfgMdX_mAbTzINmdKSRDYZm5-8f1BUrHy95lEqCOP_BQqHjG7qlMmJ8nGbSAu4HNZw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.learnpython.org</a>/</span></pre>
+                                <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">2. CP</span></div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fcertification%2Fprepare%3Ffbclid%3DIwAR1mqIri90FT97uxYmuledMFgfrzO_8EwtvP9He54Sj6dmS2GkQt0aE95x8&amp;h=AT0lmW-BolpFD0jY8FjPNFSiIdg5rHcdCSo_uAszwkhoQEjhiKIf9DRTyTX3R10lUq1EH8H7qIeFU_wxpni6-aG0XzMahW0AYT8dWg7SxepNoFo0Mq3x0xSkEctGXoD-CPXywg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.codechef.com/certification/prepare</a> (9-10 topics)<br />B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcodeforces.com%2Fblog%2Fentry%2F13529%3Ffbclid%3DIwAR3vhYV_Ue8sB62_PQSm3iQEsMbDoFdVLfL8eMLOVXz2s0wqCF4IWMCR5lc&amp;h=AT3yLPf7aRJ6FGLeEhA6sB-z7A-Mv9aDvSyit8EwOFqlFEqc_BbpLnWY9yn_1x9pKLaapdzZmz1mm56TLDn9aFp8FYNnPuj85ThuP-V5kLgXeBvFsZPKPWLHnS4t67a4bGCP1A" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://codeforces.com/blog/entry/13529</a></span></pre>
+                                <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">----------------------------------------------------------------<br />----------------------------------------------------------------</span><br /><br /><span class="_4yxo">Terms Used-</span></div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">CP: Competitive Programming</span></pre>
+                                <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Famous CP websites</span></div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2F%3Ffbclid%3DIwAR1d_Lh651dV369_PrvuVbRvhM4aTQa7610wOU1tebdrnd4WOo7GHCSxC10&amp;h=AT1etTOkmjtpK2Q7PYd9f4fqEoeyM541C57maAIovgp9s6koQ1cLY01MfGwO9gk483xBg4ClC3PAiXjsVylBj6Wk21vtcmZwbD5FrsD4HaDe1zpdINfb71PgCXeIWKzy66fTQw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">codechef</a><br /><a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fcodeforces.com%2F%3Ffbclid%3DIwAR1RsyFmpwuq-A4fbVXf_BzZ4jXH6CZHq7GoJEdvyTSR_a9W7wvV1NguCZY&amp;h=AT2TN8wtZDqYlppn3iwvu2Re0_2zHZoW08VYBHOOTLSKupjD_z_P_YYwov7UWkU8OkmMd2yWzpyafc4dKXrenIoSWFbTKiw_eI1TYGPsEhVFkYPkOqmY9-RIXNl97IqHx0C7kw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">codeforces</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdashboard%3Ffbclid%3DIwAR3Ji1sNZ4ZpKoORg2_A18zkqEgKMIgYOOSMplBVPjR4LaHxhMIqur-lOlo&amp;h=AT2OzHRgtwt8a6SiB1h_FsR4MtpIa5G5oIxma7KLR9bp1Q8AGWhZ-0qijGDHGnmdI1tfdVjQnENWif85evJnE4qKsCYwlxSHN3c9mfNNL7fAr13gp43z0lnPFkjNTpInEVFGDrETgHxdgv4i2tk" target="_blank" rel="noopener nofollow" data-lynx-mode="async">hackerrank</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerearth.com%2Fchallenges%2F%3Ffbclid%3DIwAR0XOYUv_7w7E6XYcKW3WHMzWeBIVNkfUrHFQnthAWnAGP-GnGioM5bAqPc&amp;h=AT1H7WiG-LhZ_q2d-Qt1SBtWECL_Flh3odsl5y_JCuGBmtbvkpzAFQy3vlypwjn6D44GXzkXYnEEm-MeCWY98ZyTVz9wUGyrSiE-XyreSJbURNjAi-pW6YJ5vXaCSaFM62S6zA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">hackerearth</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fprojecteuler.net%2F%3Ffbclid%3DIwAR1ud1arMDQbaV6gsLpNg0vx_g0oMFhjYkqY43Y6q5ts0_3V-ehg3K9_RRc&amp;h=AT2mJvlwT1V3rxTfhAjVj1CWLfGbLHaUKO5Ba1Xk4J535JlPkFdZvjVJg5BjpzcZ5HzWYJszlbbg5_M0aIDh_hDLyj0xs52RGC3qydYI7dyiC_OqJE1r7qM8jHO0Gg744VUBgg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">projecteuler</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fspoj.com%2F%3Ffbclid%3DIwAR3KuI5lbMY2KnaRK2b39y5DiJsP2mjRREKbE_zLhVLp-p6kqDNVVT0UEAI&amp;h=AT0KeyzWUj9PZRj-49k4SMHfCJlC_uOjbdoGhQCuqZF5og7Rjwppi3_kSTgIJWEOZysl1M221ecHrvQ6YgBvOUmV1r_A7q1B2JV3HTFvaWQIvT-jELumbMopTJz1pK_44R9k-Q" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">spoj</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fa2oj.com%2F%3Ffbclid%3DIwAR396McEj2s99MnTGcO5mDkqZfDVOrOBIP0q2XmpGJf9la-KlQh5hVJnFfo&amp;h=AT0snT4B3Z-ZfgZlPJRcllEGsVqxYP8iVTK0KqpOaFp5MAFq62x9Rl5aHFECWhms3kh_olFIDHUqKbzGboL6WOaqpBV2Jnm8VrVTneSvp8WM1GCfNXbh58c7IvAXnDoX250SPQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">a2oj</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.topcoder.com%2F%3Ffbclid%3DIwAR26iNdn0pGPpIgNPld1kAfh_CIGEmtkjzgCT-2OOjYndrj5ZElbG2Ilpz4&amp;h=AT304MrBWOkFWpQ8ttQEqK2o9LAMvanPKRDnrMkhq1nCJzGCh3YICtGWzFOKHd-s5YaG14HTHB1cTayZ_6G1qW0VjS9iqeGKKZexsVdrc1AzMwguJUm8Qck-7SP9XIg3YY8ing" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">topcoder</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fatcoder.jp%2F%3Ffbclid%3DIwAR09Mk_iCOhnFmm-Yxjj1BkA5Sv1zZXUY1GbL5F7qSHy6SIWUzAUnpn5-Sc&amp;h=AT3wA5sAs-J8XZO6usbjUJMBpucOeaoxXEDI4SmFZxOUIV5FdG77SWN3jTdhdZdhQ-pZBgvHz0nND1WsAfpNC9mnR0gwGOCK5cgj9OtTM-rpUvuYZTp6rNCj69WvXS2MaHeGGw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">atcoder</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcsacademy.com%2F%3Ffbclid%3DIwAR2-QZbnfqvoEKJYaU9Alw3PTa4dhcfo7_k1c-1G4XoAXxI71ELrSbFnGUQ&amp;h=AT1iwZshGf0FzpAMSWxS0nPiQB8JoCNtwVt2Rc_XarafY7GecEzhcVS-iHDwkSp67QxubNI-dPurGIQtRlvEoiuE9KEYs0L6oWXvOBA5GlHuCn7cF67-UbYeFIEcEW8WRbF2uw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">csacademy</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fuva.onlinejudge.org%2F%3Ffbclid%3DIwAR26e1cHcx9Pv33uCNq8hy5FD8_2doEQdEgLOvrsbC36pX9hoJr7ahlYmRk&amp;h=AT1Zr7COFjNsBBCviG1y5dPx_2B57Lrom95tKk3F-mp9Ab1lBrdZCtfcPDtBeFp2vZOJwx64OEDwjOjI5l-tOePldlzT19TuMxbNmTfRL7a-p_8aod5832Wm1SA2qsOcC3Z0_Q" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">uva.onlinejudge</a></span></pre>
+                                <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Good IDEs</span></div>
+                                <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fide%3Ffbclid%3DIwAR0NjfQEYRAnIMKaoal-QZI-0A_NWWFjJgFe0jWu_617ibSlbinMAuHdZJM&amp;h=AT251mJuwDQ8k_1N8dMPGcwoC5GzvPFutBv68H8Fyg2oXXtR69jroRtNaZhEnfXj6OQEHDv7vEi4DIKEe0MTlMpHuRzLACyD2omu8BrPaMiefZ2EWc6im5Xh38Vwe40hI4lDpw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">codechef</a><br />hackerrank<br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fideone.com%2F%3Ffbclid%3DIwAR0qJbtiXzbxANIywuNuP0fcPHgw6WzA-zq0iSW4-d_VpUm9gy_2TIh7yYk&amp;h=AT0deRRBWdvxcU8emQLA8Idsh0AJ8gkK4HjAAQCMWVqPShsefvGwEn4Ksg9LfHUhmOwVLrBLNVGSIzubIdHsFxrqi-HUfVwNY_3BXZWmqSiRgKVsAvPc2XzUhwmdXtEKFJPMnw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">ideone</a></span></pre>
+                                <blockquote class="_2cuy _509u _2vxa"><span class="_4yxp">"Measuring programming progress by lines of code is like measuring aircraft building progress by weight." - Bill Gates </span></blockquote>
+                                </div>
+                       </div>
+                     </div>
+                  </div>
+
+                  <div class="list-groupp">
+                     <div onclick="showtutorial('tutorial3')" class="list-group-iteem" style="text-transform:uppercase;"><i class="fas fa-user-tie lefti" style="float:left margin-right:50px"></i> Tutorial 3<i class="fas fa-caret-down" style="float:right"></i>
+
+                       <div class="clear"></div>
+                       <div class="hide hiddd" id='tutorial3' > <hr >
+                             <div id="js_1d" class="_5pbx userContent _3576" data-ft="{&quot;tn&quot;:&quot;K&quot;}">
+                              <div class="_2cuy _3dgx _2vxa">
+                              <div class="_2cuy _3dgx _2vxa">We hope you guys have completed <a href="https://www.facebook.com/notes/codeshows-mnit-jaipur/codeshows-tutorial-1/1552744704826664/">CodeShows Tutorial-1</a> and <a href="https://www.facebook.com/notes/codeshows-mnit-jaipur/codeshows-tutorial-2/1582464471854687/">CodeShows Tutorial-2</a>. <br />(if not then please complete these first as they make your basic strong for coding and development part.)<br /><br />Here CodeShows Team present you the final Tutorial of the Semester. Make sure you complete all the tutorials before deadline, and be regular with CP practice on various platforms. If you guys face any problems regarding the tutorials and academics, feel free to ask.</div>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa"><span class="_4yxo">Deadline : 05 January, 2019</span></span></pre>
+                              <h3 class="_2cuy _50a1 _2vxa"><span class="_4yxo">Compulsory for all years :</span></h3>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa"><span class="_4yxo">1. </span>For Mathematics (Mathematics covers a major part of CP)<br />   <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fprojecteuler.net%2F%3Ffbclid%3DIwAR3sIlZQN1VX8rbo5FQfwQBovsn6slW-5nW-QXYk1efwW1eFOPavSuXDlG0&amp;h=AT1dE31XPiMmMJswTbycXGGfFV8bn7_uMFejDNhaSKpt4zRvLEGk_NRM_E0FcsfbN-EoilziOOoOo915mRRilK163jOiShg5_JtHk_ezFLm3E5Ab1a523m-3a1teqeIJQCkCiQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy"><span class="_4yxo">https://projecteuler.net</span></a><span class="_4yxo"> (Highly Recommended)</span></span><span class="_2cuy _19ii _2vxa"><br /></span><span class="_2cuy _19ii _2vxa"><span class="_4yxo">2. </span>For Hacking <br />   <a href="https://l.facebook.com/l.php?u=https%3A%2F%2F365.csaw.io%2F%3Ffbclid%3DIwAR3BZOOmcuAyn0oB_mb9gM7bKEzcWZmIgjk4Ge77kSXz30fVGyO8uXMSEUE&amp;h=AT0AV9tNFvrXABEPd12Vx-xVFrNWElh-HJCCn1ZANXRtRO0DSwWMXU6CX7m8Sa4qd1LWhj7qglbn9EDx04H2sRtG7p50ziF9CN5t4mP2TfsRzkOaofZ-XcfKcyXtVQi2YJcjvg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy"><span class="_4yxo _4yxr">https://365.csaw.io</span></a><span class="_4yxo"> (Recommended)</span></span><span class="_2cuy _19ii _2vxa"><br /></span><span class="_2cuy _19ii _2vxa"><span class="_4yxo">3. </span>Compete in every contest on</span><span class="_2cuy _19ii _2vxa">   -<a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fcodeforces.com%2F%3Ffbclid%3DIwAR1jyjJ2iXz6BHvMYe_6s08IxEKB9-88u-k55sglJbVvIPWoEKf1WZMx21s&amp;h=AT2JCsRHRM9DDnY-_eqRyXT1M4tecGwq-E3ZztK5RsLuowKzh67AL4CCkGn7BSzOfqwq8GRONUuo6g5vFDsTX36XsxYPtDqxmtN1JSeycNWCtGdSjOaE8m2CqZm9SAnYTqfIKA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">codeforces</a></span><span class="_2cuy _19ii _2vxa">   -<a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fcodechef.com%2F%3Ffbclid%3DIwAR3gYMNOQcErYSRcjQ5yF5ln96A5_ddSR7HZYH_XnomDdbAlZK7j7JKaY6U&amp;h=AT1vnR2sFFHu9-K5PFfZRaBhtR78oIP4XueV44lH93TQbH7qnsZVXGg-GYmtCSBiC6OdyY7LdzEeIvwIqRG5gT5yKcC6myiY3cPpXabNDHW81LNVD2aYUaPRXF5puIaCjxy7Dg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">codechef</a></span><span class="_2cuy _19ii _2vxa"><br /></span><span class="_2cuy _19ii _2vxa"><span class="_4yxo">4.</span> Good CP blog</span><span class="_2cuy _19ii _2vxa">   -<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcodeforces.com%2Fblog%2Fentry%2F13529%3Ffbclid%3DIwAR2-kHqgQnS2G6wmuGxdA8HQxStMztzMdfXwpdZRkioPwIQg6lK4UwQt8-A&amp;h=AT13sEsSNQOemc-m1lxa0l0EbZ1PC7svN8pdlU01R8Ebx-R4xddQuwisOn7xuy98CX6E4c6BTysGrExjQ6QAoaG9vs6kpWEcgJmjXxzLR99hVn-P0u2AuBX4kegMFoIPZNTcAw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://codeforces.com/blog/entry/13529</a></span><span class="_2cuy _19ii _2vxa">   -<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.quora.com%2FWhat-are-good-ways-to-learn-Algorithms-and-Data-Structures-using-Python-and-Programming-contests-like-Codechef-Codeforces%2Fanswer%2FMukesh-Pathak-9%3Fshare%3Db5656f38%26srid%3DkNnP%26fbclid%3DIwAR3l2NqZZTxVY0Y94Rh74_Wci2wY8yY5JRVM2gPLAyiZiWYgH1NKC6CLnnY&amp;h=AT1hdgYlaAQZWNDcVa4RiEfJXXJr1wwDcfqPoNprWHu06DgzUg0TEcJNlbWA-5TWZw4UUeDrDwHQFkScEvK2LRhZj3bxQV5OAmddkVlhrnGE7H_gCo9xFsYCauS1mQ8nISf9W4UCaT2DLjiuBOw" target="_blank" rel="noopener nofollow" data-lynx-mode="async">https://www.quora.com/What-are-good-ways-to-learn-Algorithms-and-Data-Structures-using-Python-and-Programming-contests-like-Codechef-Codeforces/answer/Mukesh-Pathak-9?share=b5656f38&amp;srid=kNnP</a></span><span class="_2cuy _19ii _2vxa">   -<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcodeforces.com%2Fblog%2Fentry%2F57282%3Ffbclid%3DIwAR2cZ8txO_W47kkRa20lwAAk0J7q8Dr3nuHOvArpdgaUJhUBX0fKd7jP4Hg&amp;h=AT3_VLyJq0t-zTpExESgUj9QxdohX-eIVQrpewHinmZ14SSPyBPPWdkH_cI7BCCU9kcpgyyEciJ31TaB29C4KlP-a8GaPtsygMjy7G6sUS2a_Ndpu-Z_sxZUTOkXNbDwN0YqKA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://codeforces.com/blog/entry/57282</a></span><span class="_2cuy _19ii _2vxa"><br /></span><span class="_2cuy _19ii _2vxa"><span class="_4yxo">5.</span> Complete all the assignments before deadline**</span></pre>
+                              <h3 class="_2cuy _50a1 _2vxa"><span class="_4yxo">[A] For 1st year student :</span></h3>
+                              <ol class="_5a_q _509r" dir="ltr">
+                              <li class="_2cuy _509s _2vxa">Complete Previous Tutorials of HTML &amp; CSS (if not)</li>
+                              <li class="_2cuy _509s _2vxa">Assignment (Compulsory for all)<br /> <span class="_7xn"> -Create MNIT website similar to </span><a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.mnit.ac.in%2F%3Ffbclid%3DIwAR3Efnes4E97yu2WdYH_caWkRJP11cSE_-2Tzsx8jPJIrZjl-4FXfBPF0S0&amp;h=AT3xk7-yWzR1nV9BWmJrkcOnqKlTvBBerVxb1_7jxDQhplkuXOmcC9GDwIU3xQU4UzYOOmdClmzwMa_pjeeDk7VMH188G-NtNGRxbbqWO2XfXXOKwlfwXFAYybRkB2tW3X-_fA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy"><span class="_7xn">http://www.mnit.ac.in</span></a><span class="_7xn"> using HTML &amp; CSS</span></li>
+                              <li class="_2cuy _509s _2vxa"><span class="_4yxo">CP</span></li>
+                              </ol>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdomains%2Falgorithms%3Ffbclid%3DIwAR11xhi5Q23tBj69i2fDPNGqWSpYI7c6QjvO7rp0r3MhmdRo-rFpP8t3kU4&amp;h=AT0TtxNm21cd5CrvkQz_n53XFI9B4tiobwH4gf0FwTGiDYvUcWYnYgcm2phU4wPa_byV4w_p3gyw5bDDNIPiXeKGbk4HzDuR5lGSwHYs61lBfSi3T7iQylyXpwIl2Fi4nkuQyA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.hackerrank.com/domains/algorithms</a> (Tagged with Easy)</span><span class="_2cuy _19ii _2vxa">	-Complete Previous topics</span><span class="_2cuy _19ii _2vxa">	-Sorting</span><span class="_2cuy _19ii _2vxa">	-Searching</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fcertification%2Fdata-structures-and-algorithms%2Fprepare%3Ffbclid%3DIwAR0Xj6mXCudLJzYcKd5jhB0vz_g_zq6frvSiYvJpB-xtI1gHeXDzGPbN1fA&amp;h=AT1azmNShB2O4EAr6k0YZOjTzgB50ml2yvsBZQgCvb8tk68Y7QN3qRTL_QGZL3bgsO9X3FtrHaiB-2DLwRCmbVhJxN6OYTu2HlkCoXIfqQU-XXyCt3bB0skQnfafoGHH5HessA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.codechef.com/certification/data-structures-and-algorithms/prepare</a></span><span class="_2cuy _19ii _2vxa">	-Asymptotic analysis (Big-O notation)</span><span class="_2cuy _19ii _2vxa">	-Arrays</span><span class="_2cuy _19ii _2vxa">	-Strings</span></pre>
+                              <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">----------------------------------------------------</span></div>
+                              <h3 class="_2cuy _50a1 _2vxa"><span class="_4yxo">[B] For 2nd year student :</span></h3>
+                              <ol class="_5a_q _509r" dir="ltr">
+                              <li class="_2cuy _509s _2vxa"><span class="_4yxo">Complete Core Java</span></li>
+                              </ol>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.javatpoint.com%2Fjava-tutorial%3Ffbclid%3DIwAR1nt3EKx8R1lm7UGIAUkLgbyAogFB__BODEnWaoO3Nw2_4tnO0aYx-ZkAk&amp;h=AT0oD0eWKj6Ynruml5Tw4CnpukHJtglPxR1QwuX9colUfV_3WefXdhsm3ovncr_rFQWKo6m5DZ1wZjDxdlBsmxBZl0ypdcHf2bG4F2Io4aKvnoVhI-R-J0usZ05Ire9O_fTHiw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.javatpoint.com/java-tutorial</a></span><span class="_2cuy _19ii _2vxa">        -OOPS Concepts</span><span class="_2cuy _19ii _2vxa">	-Java String</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK%26fbclid%3DIwAR28QAr1DiVAElhZBUnER1Au_o8wub_5IKoJFpTMvOBG6ihcXyTm_Kmh5ok&amp;h=AT2nC9Dfvkc84Sdmp3-Qrp2zAVRHaQi9eYrGfbFbKi5sMO7r-63XXqyZ-0rtiEN-r2fKoa_bTda1exMTICaZJvMqSpS99z3HuHMdsLnv61oYSNt3mm3bXJkmHFpNp6lNERSxxA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/playlist?list=PLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK</a> </span><span class="_2cuy _19ii _2vxa">   (if not completed yet)</span></pre>
+                              <div class="_2cuy _3dgx _2vxa">2. <span class="_4yxo">Learn Javascript</span></div>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">1. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.w3schools.com%2Fjs%2Fdefault.asp%3Ffbclid%3DIwAR0yWS5gQkYF-vWzkSAWsXVChUNYj-o7fsYVXwodH6mLJ8kj1oElyKg6BBc&amp;h=AT1-rWAKXKKuC-1cZwgV8Mi-Eub559DbeB0v6e08dY_AyiYJArTCc-l_QLZ3u7NUIk6j4PmpvYWFF-PBOod4BH3kZEDmde5-_0_HTlOaCphGcJRHI2c49QrR_3Q_fFjVzyq46Q" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.w3schools.com/js/default.asp</a></span><span class="_2cuy _19ii _2vxa">2. Solve All Examples</span><span class="_2cuy _19ii _2vxa">	<a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.webhammer.com%2Fjavascript%2Fexamples%2Findex.html%3Ffbclid%3DIwAR2ldCkZXDkXKgfsRPBDI1kA8O8j04fB630XEDDnJ_jqXsPYd8LArlpY5wM&amp;h=AT1v_h3eBpbkT34x5mCbrg1F_CgntCsruy-w8nuRyFJzSi25NI4ofpgmXeuCeyosYl6_row6EIpXM-ttVNhgxbYkjkkRMxWJGeW37HEOv0WY_r9NChf8lnU0v8HeUkcuOx3YDg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">http://www.webhammer.com/javascript/examples/index.html</a></span><span class="_2cuy _19ii _2vxa">3. Solve All Assignments</span><span class="_2cuy _19ii _2vxa">	<a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.webhammer.com%2Fjavascript%2Fexercises%2Findex.html%3Ffbclid%3DIwAR1BrjhjaIn1IPdGO5MyB1qynAJ_6n4p4YgulbKvHySOaKjkndQU0I8FYI0&amp;h=AT2OMMn9eS3Hp2R03ZgdIoD7BqkZVzoEJnPqFA2ANKcWxF3auSRAnJHWmssXgTNY75WqltKUmVkzEnaYr6bwtLSLZvZsyC9ImiTigWomGj9PUOU5lALyyLeBPA0d0QinTajSKI0qtZfrUDqAxWs" target="_blank" rel="noopener nofollow" data-lynx-mode="async">http://www.webhammer.com/javascript/exercises/index.html</a></span><span class="_2cuy _19ii _2vxa"><br /></span></pre>
+                              <div class="_2cuy _3dgx _2vxa">3. <span class="_4yxo">CP</span></div>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fcertification%2Fprepare%3Ffbclid%3DIwAR1gKQ_eki8Ns_hVHDuel4D7izqv0WEFuOzd9Tacvzg26trcYo7dda5sFO0&amp;h=AT1X_rUh92vu-ALJ54QGcFifQMYduZ_lKcDmWRBq7pL9ODzUqDdunDtpkfrqLCHyVE-cOfpebJ-fQgR5bORkLTXzpzdRPgmutm8iT3C56MEWmsSPU_RuqtM4LAlHKnF9tAID7g" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.codechef.com/certification/prepare</a> <br />        (upto 10 topics, if not completed)</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdomains%2Falgorithms%3Ffbclid%3DIwAR33wTW1-fzGTsy-ZLalDWOFexkMMr2t5_qyrYKKypZC2ChIEsR9-XV9Xf8&amp;h=AT0WetuN9e4xTcvefmM6Jmdlz7ZPTb733sjyWJQYISKJSscfJmHONYisgtAVhhFDuPvXE4PLNHzqEi9sHTNeCMhIUG95iPx9pMH2E7x05w4bjgPOKFq78Q_K9WRDusNvJxzo0g" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.hackerrank.com/domains/algorithms</a>. </span><span class="_2cuy _19ii _2vxa">        Solve as many questions as you can.</span></pre>
+                              <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">----------------------------------------------------</span></div>
+                              <h3 class="_2cuy _50a1 _2vxa"><span class="_4yxo">[C] For 3rd year student :</span></h3>
+                              <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">#(Compulsory) - </span><span class="_4yxp">All 1st year and 2nd year course above should be completed by you.</span></div>
+                              <ol class="_5a_q _509r" dir="ltr">
+                              <li class="_2cuy _509s _2vxa"><span class="_4yxo">Complete Core Java</span></li>
+                              </ol>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.javatpoint.com%2Fjava-tutorial%3Ffbclid%3DIwAR3KNMD64NR73pjn9FLCcYr4eOwCLJyoiF-5Ll7W3Hv7B9BYMLXlOjRb0qY&amp;h=AT3TVbPCI7wpCnF1AziipffIg1IUUZu25BwlJv9TOWxPR1DsVQAmvkp9nTFbAqtQor9SSRAo6FDZ0ZC7V4lF1M5a9UjBBoYYHfVEDC3LG9W4l84kZ3m-fwPWYx5HTPWJkKV8nA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.javatpoint.com/java-tutorial</a></span><span class="_2cuy _19ii _2vxa">        -OOPS Concepts</span><span class="_2cuy _19ii _2vxa">	-Java String</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK%26fbclid%3DIwAR3dWYgqNahsUaqP1Z_aRTD7EGWlo0NlsoOyzIwvh5lHeKIc7xAcwYMJuBU&amp;h=AT0YLUlK4MsnO2ck0B8TNGvvySyqhc2xJ8l0_4z-VZ-SjU3Tp2LylwtwZ6hWN9tuHA00OC9d0Ki8RmlgpWxorLbCi9cFi3WFl-W-dB7AvRNADVjHiHWWkRuA-Ac_k8dyU07VAA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/playlist?list=PLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK</a> </span><span class="_2cuy _19ii _2vxa">   (if not completed yet)</span><span class="_2cuy _19ii _2vxa"><br /></span></pre>
+                              <div class="_2cuy _3dgx _2vxa">2. <span class="_4yxo">Learn Andriod</span></div>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. User Interface</span><span class="_2cuy _19ii _2vxa">	<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fin.udacity.com%2Fcourse%2Fandroid-basics-user-interface--ud834-india%3Ffbclid%3DIwAR0ZJcb4_Jzs9aBZqni_gB6prMmMe6z-xWUAO6rnUDr7nTbkDickPGl5xjk&amp;h=AT2P9mKFL2jIAV63sHD6V1fylNz6DbbLz6JxtsT3PKXjuy6RRRsa_jOp0QCA2L4PZHiGg_xfvuLhktPaOigLTYa22PH5z4S0rmJ_KP4lv-A6KsZXOiMD6cAp50A15T9a08kFQg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://in.udacity.com/course/android-basics-user-interface--ud834-india</a></span><span class="_2cuy _19ii _2vxa">B. User Input</span><span class="_2cuy _19ii _2vxa">	<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fin.udacity.com%2Fcourse%2Fandroid-basics-user-input--ud836%3Ffbclid%3DIwAR1EX7IuhADwcQ6bInAqFcKuY2ssa3yyUMZvwEEQH6CCNqR85YcT24zU3CE&amp;h=AT2sJhMjXaxMPnsQMBlX36BlXYyHgLmWe_IRvym2uD61wD_2fLbCOhVjmTxfiFLxS6-VcnBQrN1LBcczYRJgMvHCNvFIFn0Olwet3cmW7gTK0Hf3BWHFDd8osQc3nzwsOdjjrw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://in.udacity.com/course/android-basics-user-input--ud836</a></span><span class="_2cuy _19ii _2vxa">C. Complete Practice Sets of above links.</span></pre>
+                              <div class="_2cuy _3dgx _2vxa">3. <span class="_4yxo">CP</span></div>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fcertification%2Fprepare%3Ffbclid%3DIwAR1sZcq1mVYLoE1BuqHViEdLo5TGqM1B1eE3wRYSVc-ALwlWs2c_IsTsCeY&amp;h=AT01IT_4brwNvjgqIYqrbssbcglM4V4-EU7rcymwTZIb7HcoCzTrkAI-deWBPoKy3QRWFm0Yeb9NY5VsLSsKzyRzsSkHVRA_yINSmYTczCDsuuqedA-xjVAx1lMUe4gJB-O0LA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.codechef.com/certification/prepare</a> <br />        (upto 10 topics, if not completed)</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdomains%2Falgorithms%3Ffbclid%3DIwAR1nZJxPTBH7kyKGzMyTQLup_BfNnEYW19AB9N3YFjajBJScm7uQuWBdmkI&amp;h=AT0_DINU7nB4q_wdtXKWWTU9LG6NGU8Y8LtCHgo2az0Xxc86FzYI_46HGWB5X1grdRCcpcktUOWrwyzGsMt-y_UY79ifpWF3LcBfIRtE5TtKiNryFSCvnDqk9nBhJEV4tM5Xcw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.hackerrank.com/domains/algorithms</a>. </span><span class="_2cuy _19ii _2vxa">        Solve as many questions as you can.</span></pre>
+                              <div class="_2cuy _3dgx _2vxa">If you face any problem in any topic, feel free to ask.</div>
+                              <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">----------------------------------------------------------------<br />----------------------------------------------------------------</span> <br /><br /><span class="_4yxo">Terms Used-</span></div>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">CP: Competitive Programming</span></pre>
+                              <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Famous CP websites</span></div>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2F%3Ffbclid%3DIwAR2cJwO1OtrVBVkHz0db1LwFvNZpWkK69229w7aluuB_zcEtafhLGgsY0lg&amp;h=AT0kzvhVq7OvNb66x8uHqs1xQ6EwjJzUInaLOR2YruXbzuIZChod_U42_k6bQG5Nb0KJFsZuIwqF_FVw7GECbfzg4Ao9s8sEw2jVSjSwC5X_Me2VYHiZJUilS9EvdjBGcnHDBA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">codechef</a><br /><a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fcodeforces.com%2F%3Ffbclid%3DIwAR0NeoG9rQ_1-Qz3uXK9RDcH_PfjIMnqPPpW2HDRJRMFfmsq71-p9QZhNuY&amp;h=AT31OwSeWJYH0tpTmnuIPnCF8O-YCc7Ab-YADKfqJ3WRnFbZ3gnF5NDmKisdulXPx0KYLLO_yssLgnEe6y3QIYzzr7e61mVSaGqGc6jbQJBndFKS4ZV73KeWH8P80kTIICkQRQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">codeforces</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdashboard%3Ffbclid%3DIwAR3ySgeTeNN3azsiiczwPADgce3v8eT5VKwwCG1-lhDFuabpQXWg_qsYZ4I&amp;h=AT0E2j4NiF3bhNmG06uTpFKQz-vyW-6etExKq5UDc64h-mLhmZUwKuFUGe2GdnrWGdKVXnHwa27Bze7KW2B0YxbsElDuaw3h4_d8neynn1116kgsBKmtEtYtOXxPEhuYpwfUzw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">hackerrank</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerearth.com%2Fchallenges%2F%3Ffbclid%3DIwAR0RhECARs1GGUJeLj_VFLjPO3BUCn5RmhCUtjnh_flGcFMPujmyVB3j7G4&amp;h=AT0vZHVoUI32EALntj0ESTVcvQHfQVQHoucqTpaPDt2sZbLHJBBdb-3hHb2BGNbNTvRhfmivsEnuwwtkNnc5qNFWAgutmWgGd9ZknKDSK-RobhRIcOnyZscZBbR2IIwYxgGg5Q" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">hackerearth</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fprojecteuler.net%2F%3Ffbclid%3DIwAR3NPZ1oxd2hV81VR3QPIKbuFdIn7T1JbP4LWXQBSt-wWwqk8PqC39h6mtI&amp;h=AT0UhBUkkddLFIj-W-C66APHc7dSv3hAFpg-XRx7g2SUl78rOF4GqEHXmFbrU895uQ2_co5VwyThbpcz3F3zg92rRP5AadHgx8_OXne_2xfNvNpadN5-0f_GN-r_-fHdpEQYLA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">projecteuler</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fspoj.com%2F%3Ffbclid%3DIwAR1pCg9jZTr2vLU0B9xo4Q5YUYSRGJUQKQiBX5d7UgbAcpir9xdSLluJdnk&amp;h=AT2Bl6wqiBBkE_qGc2xzLoROat16fy5uo_Ud6fuYYS4rEYEoBjChhmbiGrunKIO0gaSnCQAGVd0FSp5aNurtsMx6fsvyEUg5T7A5t0d6QgYOgilUsuhO8Flak5zxWWRQDNEMKA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">spoj</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fa2oj.com%2F%3Ffbclid%3DIwAR0Sft0xw8hu3c5-IOi0plag-0WdtrJqn-61p5BdKjpI5T8ukkbO8-1V5SI&amp;h=AT0lihoDbkcwdcvsba7hkiUPFPPC0Pcyf4PehFkDQmv1h6s62_wwirwJLz8m0kiLseujaT9EgtlTnFEsyKD916lcon-9zFG-KD1zs3fWMbLbfb9WENBfB9wx8gNmPStTTShLEw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">a2oj</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.topcoder.com%2F%3Ffbclid%3DIwAR2-1Bs16mjQeBv_1lpy6k_fbR_Kz4wFTgwYDo8ZMLGhu3s9Enej4pjXksc&amp;h=AT3HfOdC719Lzo9ivo6dtCrhiYZi9bOja8EN7KleZhnHb5fgX4ljpkBUJCpDVqSF-mAtYAb_AvzDQFpl6c9oPwLYlbGXz0N-nD3GgdoARNPlEuvsN16tPbXDj1pHt2FtsQLJag" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">topcoder</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fatcoder.jp%2F%3Ffbclid%3DIwAR29JM8RGMjcpLpHv--o_K8C7UG2ls3irCUIsLDg4MJ27X3KjJiQezzrQDE&amp;h=AT0cBS_24pjwaUA27hY3E_syHMqVjzYokBegMwPeSqZ8E90hxmB2lfWIdb3A4BVOOul2POQMMy1qbGY9lT2QMZOGBEQhwg5psLIRZfKTDmB0Rrv0gLg6a3AJZ3ihOLcIpPFx-Q" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">atcoder</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcsacademy.com%2F%3Ffbclid%3DIwAR2gZkgTGqd76dwK9xaZK6efrHQT_43387gA45qmG5Fy0v_3faBMNkj3Gsc&amp;h=AT0Mo1h9G7IfV6ZJlrKb2K_3ZFab0Cu-_E72DcadyBqJShmLA9dbRNQPW4HMmbn-IbMdzkaPVeZNVN0E-WLYw8j6gchW3ZcXdW6S31wJnciLz3NE4cATerd56ZLKrxGVAa-niQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">csacademy</a><br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fuva.onlinejudge.org%2F%3Ffbclid%3DIwAR1Nc4vgniwhCBxvDwFW11UyC_7IXD9UHeuxK8CtVTqSzymo0-K4Iw_3gFU&amp;h=AT1zc8MRVFaybsP2BqKY7WPy3T3QYCeI1ZsXtiPeZw6paAn0VKSu2WDOIM-seo-avTkXzOd3TbMUvojfQbvNFVDt-PWpwf6BiybIk4Kb4Hj00r-TZQy1EgK8bTJxIz-HVA378g" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">uva.onlinejudge</a></span></pre>
+                              <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Good IDEs</span></div>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fide%3Ffbclid%3DIwAR3FDmaT7Zy_4uBj-y_5XjdlwvF191TFyGIy78YADwj4fzAl2Kxc2TfSNQk&amp;h=AT1Yrc1JS83p0PmrBYtLP1mpo6ntDRQbjuy1k-AUA_Sm89YyOTk06i3c_PS5WGNg9khUd7MHLqfpODkMcWZIaCIgxmy4js36z3ObgC5mXfOqIFJ5_jTfosaek4CqYZymqtKfQg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">codechef</a><br />hackerrank<br /><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fideone.com%2F%3Ffbclid%3DIwAR1Mfqb2geigpSnvwfWSr0WZPzSkpLP79zRkf23PeC1JpkYAoVcrK2VdAgI&amp;h=AT11CQuVDLzGeMpc3L4A3LFAn9-xlB7Jk6phxxiS8M3I74lug3DtDJ44et1-uRTKl6QEPbLcf2J6LQXk1Zl76MduUvcWiIOcDdy7KYF7R1gz9Nx-FPX2RzropX4wmPIGWsKTAQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">ideone</a></span></pre>
+                              <blockquote class="_2cuy _509u _2vxa">"Every great developer you know got there by solving problems they were unqualified to solve until they actually did it." - Patrick McKenzie</blockquote>
+                              </div>
+                              </div>
+                       </div>
+                     </div>
+                  </div>
+
+              </div>
+
+          </div>
+
+          <div class="subcontent " id="contact">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                      <button type="button"  class="btn btn-info sidebarCollapse">
+                          <i class="fas fa-align-left"></i>
+                      </button>
+
+                  </div>
+              </nav>
+
+              <div class="container contact">
+
+                      <p>OUR SOCIAL MEDIA LINKS</p>
+                  		<div class="row">
+                  		  <div class="flex">
+                          <i class="fab fa-facebook-f"></i>
+                        </div>
+                  			<a href="https://www.facebook.com/codeshows/" target="_blank">FACEBOOK LINK</a>
+                  		</div>
+                  		<div class="row">
+                  			<div class="flex"><i class="fab fa-whatsapp"></i>  </div>
+                  			<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2DpBUfd%3Ffbclid%3DIwAR1VyaWCogHBKhIBFWJrS4zPlJue4GwmxtwHRF8uizS_LcdC7DLBrXaz0RI&h=AT08uLu9ccSVaDQJGBqXBjkuLV_cpJ9gQd6aLB39-2ZvtaWIe2XDhLaKRayWqasS_7ZmZ53XbxZKgiznAJh3oGn0ZqUfsJhldEybRxrnCuPmpNNRHDdzB146fPNWJJokx6yKqdHgOI5mK7gNrp6lj1YmE0G5pieOEhlkOpehs8DvIWkYtJG-P-c4N9GNM55_5ehcFa2tE4pvoSW9IgrzuYIp9NXrVpI6eZ_BtKn2kuqaTcOMGbXmdJfh5QjTd-umf2VQxEiMOfuVmwVPDGcR4CTuH0DPE2dbJSJzlXiVXJ7PFzqDC6wiGoWd8ZTrzZZXL0JoWMSr93oDiwqQLSTQKWStrGeKi24Xu0yPOuP32PCmgxHncewKJTOhyQFUwYDl3hYiwxmhnkGt1YJS3o5OfsGArMF0O9YmC5Uwg6M0qTVrhniprM3MZB0YrdW7PLGQf7bE6qPd0KvEgtUfjmjILDd0-_z454dHWNX3T8St-SiBgVkh1CY8UtNNxD9oece23WWnYFS-A-Ol7-QrcDs8pEfkPi2ZgeKt1rnGYLvnJQC_WpVwJPHyrw7jFNBrFHFt2OVWjxj1A2pDfWi8AVmVqfvmevBg1LIWADGriUg1KW3-Y9nySTzSna77-n9poNaniKvHbZKA" target="_blank">FIRST YEAR WHATSAPP GROUP LINK</a>
+                  		</div>
+                  		<div class="row">
+                  		<div class="flex"><i class="fab fa-whatsapp"></i>  </div>
+                  			<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2OOh9en%3Ffbclid%3DIwAR15i1MIaciDH_c2YXg5jedQKhYXV2LoS_nLXHUDMBnU0HlGZbJZSxLW7yo&h=AT3hSNgTLpR_orbYbzWVAcCwXS6l4DbjOkaEGu1yixdJCOx7VSE-zmYzPOEneZqB-DSBaGCxbvdydeUayAiEl0N9zsTc1XWkAPg8DGl7KL8D5lfhiYdnJglgO0XeYuDPC0bAaGR9rro45xdMmtEBR3Uzg7Xcqh5pWpPkXDXVx18DzElsHIt0EqPqau1uw_1xJet1HBS-zAQXHSi1X7fp-rK7MgUenFN-S-zCQ8AL8gpyE59azwExY4JRsDPpATt2hHoU61rLC_G0NzXAXlpt3bFvm7Ea85MEUS5iUGtUhRTSxKDuswp8diPddjGNo0UMs5CNT2RJCPLzB6q8QdgLApzlaU8jrbEW9CLGca6kmBnq45b4p_pth8wnUmALAvWWSejeWHc0s-ogW7uCO_w1pNRrHqWnW650t1teUi8FzkHhHsgu5eu_-xvHWBRPbcSarAIP9zs74iXJeN6LiAdSmMv8h5JeDenqd6c66_Mk1cbBTNgLdoJ-7Hlc4YE79fMUMpN0RzJ_tXITUM3dZas9e-_HOIEU2SwRmS2zY0eDORTC_7Zw1JRE1ChHZM7BaByXBd8widrD_iX2hUBY2-kbIDDYN3DhF4yHoxEzkHJ6sJ2rBCJplueYc9EdtruIzLLmgtL3n3-s" target="_blank">SECOND YEAR WHATSAPP GROUP LINK</a>
+                  		</div>
+                  		<div class="row">
+                  		    <div class="flex">	<i class="fab fa-telegram-plane"></i> </div>
+                  			<a href="https://www.facebook.com/codeshows/" target="_blank">TELEGRAM LINK</a>
+                  		</div>
+
+              </div>
+
+          </div>
+
+
+
+          <div class="subcontent " id="developer">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                      <button type="button"  class="btn btn-info sidebarCollapse">
+                          <i class="fas fa-align-left"></i>
+                      </button>
+
+                  </div>
+              </nav>
+
+              <div class="container developer">
+
+                       <div class="row">
+                         <div class="col-sm-3 col-md-3">
+                           <div class="team-member">
+                             <img class="mx-auto rounded-circle" src="img/avatar.png" alt="">
+                             <h4>Suryaprakash Agarwal</h4>
+                           </div>
+                         </div>
+                         <div class="col-sm-3 col-md-3">
+                           <div class="team-member">
+                             <img class="mx-auto rounded-circle" src="img/avatar.png" alt="">
+                             <h4>Ritika Mor</h4>
+                           </div>
+                         </div>
+                         <div class="col-sm-3 col-md-3">
+                           <div class="team-member">
+                             <img class="mx-auto rounded-circle" src="img/avatar.png" alt="">
+                             <h4>Dhruv Golani</h4>
+                           </div>
+                         </div>
+
+                         <div class="col-sm-3 col-md-3">
+                           <div class="team-member">
+                             <img class="mx-auto rounded-circle" src="img/avatar.png" alt="">
+                             <h4>Ravi Saraswat</h4>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+
+              </div>
+
+          </div>
+
+
+
+
+
+       </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('.sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+
+    </script>
+
+    <script type="text/javascript">
+              sub = document.getElementsByClassName("tablinks");
+              sub[0].click();
+
+              function show(eve,idt){
+                console.log(eve,idt);
+                var i, subcontent, sublinks;
+               subcontent = document.getElementsByClassName("subcontent");
+                sublinks = document.getElementsByClassName("tablinks");
+
+
+               for (i = 0; i < subcontent.length; i++) {
+                 subcontent[i].className = subcontent[i].className.replace(" active", "");  }
+
+                 for (i = 0; i < sublinks.length; i++) {
+                   sublinks[i].className = sublinks[i].className.replace(" active", "");
+                  }
+                  console.log(idt);
+                  document.getElementById(idt).className += " active";
+                  eve.currentTarget.className += " active";
+                }
+
+              function showtutorial(id){
+                console.log(id);
+                document.getElementById(id).classList.toggle("hiddd");
+              }
+
+
+              function showinfo(id){
+                  console.log(id);
+                  a = document.getElementsByClass("outercard");
+                  for(var i = 0 ; i<a.length; i++)
+                  a[i].style.display = "none";
+
+                  b = document.getElemntById(id);
+                  b.style.display = "block";
+              }
+
+
+    </script>
+</body>
+
+</html>
