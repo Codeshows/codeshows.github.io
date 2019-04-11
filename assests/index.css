@@ -96,6 +96,7 @@
       overflow-y:scroll;
       position:fixed;
       top:80px;
+      overflow-x: hidden;
 
 
   }
@@ -361,6 +362,10 @@
     color: black;
   }
 
+  .home {
+    padding-bottom: 150px;
+  }
+
   #contest .container1{
       width: 98%;
       padding: 1%;
@@ -436,14 +441,13 @@
   padding-bottom: 100px;
 }
   #tutorial  .list-groupp{
-   margin-top:2%;
+   margin-top:5%;
    cursor:pointer;
+   width: 100%;
  }
 
  #tutorial .list-group-iteem{
-   padding:1%;
-   padding-right:2%;
-   padding-left: 7%;
+   padding:2%;
    min-height:10px;
    background: white;
    border-radius: 20px;
@@ -483,16 +487,49 @@
    display:none;
  }
 
+   @media (max-width: 768px) {
+
+     #content{
+       padding: 5px;
+       padding-bottom: 150px;
+       }
+
+     #tutorial .container{
+       padding: 5px;
+       }
+
+      #tutorial  .list-groupp{
+              margin-top:30px;
+        }
+
+      #tutorial .list-group-iteem{
+              padding:25px;
+              overflow-y: scroll;
+        }
+
+      #contact .row{
+        margin: 0;
+        text-align: center;
+        padding-top: 10px;
+      }
+
+      #contact .row a{
+        width: 100%;
+        text-align: center;
+      }
+
+
+
+   }
+
  #contact p{
 text-align:center;
   font-weight:bolder;
   font-size:40px;
-  font-family: monospace;
   color:#5258a8;
 }
 #contact a{
   font-size: 20px;
-  font-family: cursive;
   text-align:center;
   color: black;
   padding: 15px 0px 15px 20px;
@@ -550,6 +587,34 @@ text-align:center;
   text-transform: uppercase !important;
   padding:2%;
 
+}
+
+#team flex{
+  display: block;
+  flex-wrap: nowrap;
+  padding-bottom: 500px;
+}
+#team .founders , .mentors , .submentors{
+  width: 300px;
+  height: auto;
+  float: left;
+  border: 1px solid black;
+  background: white;
+  padding: 2%;
+  border-radius: 10px;
+  margin-left: 25px;
+  margin-bottom: 30px;
+  font-weight:bold;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+#team li{
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+#team .main{
+  padding-bottom:50px;
 }
 
 .developer {
