@@ -1,3 +1,5 @@
+
+
     .head{
       background-color: white;
       box-shadow: 2px 0 22px grey;
@@ -43,12 +45,12 @@
   }
 
   body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Ubuntu', sans-serif;;
       background: #fafafa;
   }
 
   p {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Ubuntu', sans-serif;
       font-size: 1.1em;
       font-weight: 300;
       line-height: 1.7em;
@@ -209,6 +211,7 @@
       right: 0;
 
 /* background-image: linear-gradient(to top, #5258a8 0%, #c7eafd 100%); */
+/* background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
   }
 
   #content.active {
@@ -260,7 +263,6 @@
   }
   h1{
     font-size:30px;
-    font-family:cursive;
     text-align:center;
   }
 
@@ -413,7 +415,6 @@
     #contest li{
       margin-left: 1.5%;
       padding-left: 1.5%;
-      font-family:comic sans MS;
       font-size:20px;
       line-height: 1.6;
     }
@@ -425,7 +426,6 @@
       padding-top:0.8%;
       padding-bottom: 0.8%;
       padding-left: 30px;
-      font-family: georgia;
       font-size:20px;
     }
     #contest a{
@@ -441,7 +441,7 @@
   padding-bottom: 100px;
 }
   #tutorial  .list-groupp{
-   margin-top:5%;
+   margin-top:3%;
    cursor:pointer;
    width: 100%;
  }
