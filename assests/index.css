@@ -243,6 +243,13 @@
       #content.active {
           width: calc(100% - 250px);
       }
+
+      #content.active .container{
+        min-width: 400px;
+        overflow-x: scroll;
+        padding-left: 40px;
+
+      }
       .sidebarCollapse span {
           display: none;
       }
