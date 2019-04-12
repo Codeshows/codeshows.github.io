@@ -237,6 +237,10 @@
           margin-left: -100%;
           width: 100% !important;
       }
+
+      #sidebar li a{
+        padding-left: 8% !important;
+      }
       #sidebar.active {
           margin-left: 0;
       }
