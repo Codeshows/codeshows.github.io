@@ -458,10 +458,14 @@
     </script>
 
     <script type="text/javascript">
+              var sidebar = document.getElementById('sidebar');
+              var content = document.getElementById('content');
               sub = document.getElementsByClassName("tablinks");
               sub[0].click();
 
+
               function show(eve,idt){
+                var x = window.matchMedia("(max-width: 760px)");
                 console.log(eve,idt);
                 var i, subcontent, sublinks;
                subcontent = document.getElementsByClassName("subcontent");
@@ -477,6 +481,11 @@
                   console.log(idt);
                   document.getElementById(idt).className += " active";
                   eve.currentTarget.className += " active";
+
+                  if (x.matches) {
+                    sidebar.classList.remove("active");
+                    content.classList.remove("active");
+                  }
                 }
 
               function showtutorial(id){
