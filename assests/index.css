@@ -1,5 +1,7 @@
 
-
+    .container{
+      min-width: 300px;
+    }
     .head{
       background-color: white;
       box-shadow: 2px 0 22px grey;
