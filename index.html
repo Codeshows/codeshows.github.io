@@ -14,10 +14,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
+  <div id="loader-wrapper">
+    
+    <div class="entry-header">
+      <h1 class="entry-title">CODESHOWS - CODING CLUB,MNIT JAIPUR</h1>
+      <p>Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.</p>
+    </div>   
+        
+    <div id="loader"></div>
+          
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+          
+  </div> 
 
   <div class="head">
      <div class="logo1"> </div>
@@ -408,6 +425,7 @@
                      </div>
 
               </div>
+            </div>
 
           </div>
 
@@ -476,8 +494,14 @@
                   b.style.display = "block";
               }
 
+              $(document).ready(function() {
+  setTimeout(function(){
+    $('body').addClass('loaded');
+  }, 2500);
+});
 
     </script>
+
 </body>
 
 </html>
