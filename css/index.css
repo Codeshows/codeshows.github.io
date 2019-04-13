@@ -656,3 +656,14 @@ text-align:center;
 .developer img:hover{
   transform: scale(1.1);
 }
+
+footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  padding: 0.8%;
+  text-align: center;
+  font-size: 15px;
+  box-shadow: 2px 0 22px grey;
+}
