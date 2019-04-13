@@ -1,3 +1,4 @@
+
     .head{
       background-color: white;
       box-shadow: 2px 0 22px grey;
@@ -14,6 +15,7 @@
       height: 80px;
       position: fixed;
       top:0;
+      display: flex;
 
     }
     .logo1{
@@ -25,7 +27,7 @@
       float: left;
     }
     .logo2{
-      height: 40px;
+      height: 100%;
       float: left;
       padding: 10px 0 20px 10px;
       font-size: 30px;
@@ -37,18 +39,37 @@
       color:#555555;
     }
 
+     @media (max-width: 280px){
+      .head {
+        
+        overflow-x: scroll;
+        padding: 0;
+        align-items: justify;
+      }
+
+      .logo1{
+        width: 0%;
+      }
+
+      .logo2{
+        width: 100%;
+
+      }
+
+     }
+
   .litype{
       height:40px;
       line-height: 18px;
   }
 
   body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Ubuntu', sans-serif;;
       background: #fafafa;
   }
 
   p {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Ubuntu', sans-serif;
       font-size: 1.1em;
       font-weight: 300;
       line-height: 1.7em;
@@ -209,6 +230,7 @@
       right: 0;
 
 /* background-image: linear-gradient(to top, #5258a8 0%, #c7eafd 100%); */
+/* background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
   }
 
   #content.active {
@@ -230,7 +252,12 @@
   @media (max-width: 768px) {
 
       #sidebar {
-          margin-left: -250px;
+          margin-left: -100%;
+          width: 100% !important;
+      }
+
+      #sidebar li a{
+        padding-left: 8% !important;
       }
       #sidebar.active {
           margin-left: 0;
@@ -261,7 +288,6 @@
   }
   h1{
     font-size:30px;
-    font-family:cursive;
     text-align:center;
   }
 
@@ -440,7 +466,7 @@
   padding-bottom: 100px;
 }
   #tutorial  .list-groupp{
-   margin-top:5%;
+   margin-top:30px;
    cursor:pointer;
    width: 100%;
  }
@@ -643,3 +669,4 @@ text-align:center;
 .developer img:hover{
   transform: scale(1.1);
 }
+
