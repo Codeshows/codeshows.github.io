@@ -1,7 +1,4 @@
 
-    .container{
-      min-width: 300px;
-    }
     .head{
       background-color: white;
       box-shadow: 2px 0 22px grey;
@@ -18,6 +15,7 @@
       height: 80px;
       position: fixed;
       top:0;
+      display: flex;
 
     }
     .logo1{
@@ -29,7 +27,7 @@
       float: left;
     }
     .logo2{
-      height: 40px;
+      height: 100%;
       float: left;
       padding: 10px 0 20px 10px;
       font-size: 30px;
@@ -40,6 +38,25 @@
       font-weight:bold;
       color:#555555;
     }
+
+     @media (max-width: 280px){
+      .head {
+        
+        overflow-x: scroll;
+        padding: 0;
+        align-items: justify;
+      }
+
+      .logo1{
+        width: 0%;
+      }
+
+      .logo2{
+        width: 100%;
+
+      }
+
+     }
 
   .litype{
       height:40px;
@@ -249,13 +266,6 @@
       }
       #content.active {
           width: calc(100% - 250px);
-      }
-
-      #content.active .container{
-        min-width: 400px;
-        overflow-x: scroll;
-        padding-left: 40px;
-
       }
       .sidebarCollapse span {
           display: none;
