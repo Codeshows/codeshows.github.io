@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -27,8 +28,7 @@
   <div id="loader-wrapper">
     
     <div class="entry-header">
-      <h1 class="entry-title">CODESHOWS - CODING CLUB,MNIT JAIPUR</h1>
-      <p>Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.</p>
+      <h1 class="entry-title">CODESHOWS</h1>
     </div>   
         
     <div id="loader"></div>
@@ -56,10 +56,10 @@
                 </li>
                 <li class="tablinks" onclick="show(event,'contest')">
 
-                    <a href="#"> <i class="fas fa-trophy"></i> Contest</a>
+                    <a href="#"> <i class="fas fa-trophy"></i> Contests</a>
                 </li>
                 <li class="tablinks" onclick="show(event,'tutorial')">
-                    <a href="#"><i class="fas fa-graduation-cap"></i> Tutorial </a>
+                    <a href="#"><i class="fas fa-graduation-cap"></i> Tutorials </a>
                 </li>
 
                 <li class="tablinks" onclick="show(event,'team')">
@@ -130,30 +130,54 @@
                         <div class="main">
                         <div class="heading">CONTEST LINKS</div>
                         <div class="con">
-                        <p class="contest1"> Contest 5: (Code Friday) (8 March 2019)</p>
-                        <li ><a href="http://hck.re/CFFC2" target="_blank">Contest 5-Combined for all </a></li>
+                        <div class="contest1" onclick="showans('ans1')">
+                          <i class="fas fa-trophy"></i> 
+                         Contest 5: (Code Friday) (8 March 2019)
+                         <i class="fas fa-sort-down" style="float:right"></i>
+                       </div>
+                        <p class="hide" id="ans1"><a href="http://hck.re/CFFC2" target="_blank">Contest 5-Combined for all </a></p>
                         </div>
                         <div class="con">
-                        <p class="contest1">Contest 4: (24 Feb 2019) </p>
-                        <li><a href="http://hck.re/td11545" target="_blank">Contest 4-Combined for all</a></li>
+                        <div class="contest1" onclick="showans('ans2')">
+                          <i class="fas fa-trophy"></i> 
+                          Contest 4: (24 Feb 2019) 
+                          <i class="fas fa-sort-down" style="float:right"></i>
+                        </div>
+                        <p class="hide" id="ans2"><a href="http://hck.re/td11545" target="_blank">Contest 4-Combined for all</a></p>
                         </div>
                         <div class="con">
-                        <p class="contest1">Contest 3: (Code Friday) (25 Jan 2019)</p>
-                        <li ><a href="http://hck.re/CFCSC3" target="_blank">Contest 3-Combined for all </a></li>
+                        <div class="contest1" onclick="showans('ans3')">
+                          <i class="fas fa-trophy"></i> 
+                        Contest 3: (Code Friday) (25 Jan 2019)
+                        <i class="fas fa-sort-down" style="float:right"></i>
+                      </div>
+
+                        <p class="hide" id="ans3"><a href="http://hck.re/CFCSC3" target="_blank">Contest 3-Combined for all </a></p>
                         </div>
                         <div class="con">
-                        <p class="contest1">Contest 2: (17 Nov 2018)</p>
-                        <li ><a href="http://hck.re/cc21y" target="_blank">Contest 2-For First Year </a></li>
-                        <li ><a href="http://hck.re/cc22y" target="_blank">Contest 2-For Second and Third year</a></li>
+                        <div class="contest1" onclick="showans('ans4')">
+                          <i class="fas fa-trophy"></i>  
+                        Contest 2: (17 Nov 2018)
+                        <i class="fas fa-sort-down" style="float:right"></i></div>
+                        <p class="hide" id="ans4"><a href="http://hck.re/cc21y" target="_blank">Contest 2-For First Year </a><br>
+                        <a href="http://hck.re/cc22y" target="_blank">Contest 2-For Second and Third year</a></p>
                         </div>
                         <div class="con">
-                        <p class="contest1">Contest 1: (26 Oct 2018)</p>
-                        <li ><a  href="http://hck.re/cc216" target="_blank">Contest 1-For First Year </a></li>
-                        <li ><a  href="http://hck.re/cc127" target="_blank">Contest 1-For Second and Third year</a></li>
+                        <div class="contest1" onclick="showans('ans5')">
+                          <i class="fas fa-trophy"></i>  
+                        Contest 1: (26 Oct 2018)
+                        <i class="fas fa-sort-down" style="float:right"></i></div>
+                      
+                        <p class="hide" id="ans5"><a  href="http://hck.re/cc216" target="_blank">Contest 1-For First Year </a><br>
+                        <a  href="http://hck.re/cc127" target="_blank">Contest 1-For Second and Third year</a></p>
                         </div>
                         <div class="con">
-                        <p class="contest1">Preliminary Contest: (1 Oct 2018)</p>
-                        <li class="links"><a href="https://www.hackerearth.com/codeshows-preliminary-contest" target="_blank" >Preliminary Contest</a></li>
+                        <div class="contest1" onclick="showans('ans6')" >
+                          <i class="fas fa-trophy"></i> 
+
+                        Preliminary Contest: (1 Oct 2018)
+                        <i class="fas fa-sort-down" style="float:right"></i></div>
+                        <p class="hide" id="ans6"><a href="https://www.hackerearth.com/codeshows-preliminary-contest" target="_blank" >Preliminary Contest</a></p>
                         </div>
                       </div>
                   </div>
@@ -271,15 +295,15 @@
                               <li class="_2cuy _509s _2vxa">Assignment (Compulsory for all)<br /> <span class="_7xn"> -Create MNIT website similar to </span><a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.mnit.ac.in%2F%3Ffbclid%3DIwAR3Efnes4E97yu2WdYH_caWkRJP11cSE_-2Tzsx8jPJIrZjl-4FXfBPF0S0&amp;h=AT3xk7-yWzR1nV9BWmJrkcOnqKlTvBBerVxb1_7jxDQhplkuXOmcC9GDwIU3xQU4UzYOOmdClmzwMa_pjeeDk7VMH188G-NtNGRxbbqWO2XfXXOKwlfwXFAYybRkB2tW3X-_fA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy"><span class="_7xn">http://www.mnit.ac.in</span></a><span class="_7xn"> using HTML &amp; CSS</span></li>
                               <li class="_2cuy _509s _2vxa"><span class="_4yxo">CP</span></li>
                               </ol>
-                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdomains%2Falgorithms%3Ffbclid%3DIwAR11xhi5Q23tBj69i2fDPNGqWSpYI7c6QjvO7rp0r3MhmdRo-rFpP8t3kU4&amp;h=AT0TtxNm21cd5CrvkQz_n53XFI9B4tiobwH4gf0FwTGiDYvUcWYnYgcm2phU4wPa_byV4w_p3gyw5bDDNIPiXeKGbk4HzDuR5lGSwHYs61lBfSi3T7iQylyXpwIl2Fi4nkuQyA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.hackerrank.com/domains/algorithms</a> (Tagged with Easy)</span><span class="_2cuy _19ii _2vxa">	-Complete Previous topics</span><span class="_2cuy _19ii _2vxa">	-Sorting</span><span class="_2cuy _19ii _2vxa">	-Searching</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fcertification%2Fdata-structures-and-algorithms%2Fprepare%3Ffbclid%3DIwAR0Xj6mXCudLJzYcKd5jhB0vz_g_zq6frvSiYvJpB-xtI1gHeXDzGPbN1fA&amp;h=AT1azmNShB2O4EAr6k0YZOjTzgB50ml2yvsBZQgCvb8tk68Y7QN3qRTL_QGZL3bgsO9X3FtrHaiB-2DLwRCmbVhJxN6OYTu2HlkCoXIfqQU-XXyCt3bB0skQnfafoGHH5HessA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.codechef.com/certification/data-structures-and-algorithms/prepare</a></span><span class="_2cuy _19ii _2vxa">	-Asymptotic analysis (Big-O notation)</span><span class="_2cuy _19ii _2vxa">	-Arrays</span><span class="_2cuy _19ii _2vxa">	-Strings</span></pre>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdomains%2Falgorithms%3Ffbclid%3DIwAR11xhi5Q23tBj69i2fDPNGqWSpYI7c6QjvO7rp0r3MhmdRo-rFpP8t3kU4&amp;h=AT0TtxNm21cd5CrvkQz_n53XFI9B4tiobwH4gf0FwTGiDYvUcWYnYgcm2phU4wPa_byV4w_p3gyw5bDDNIPiXeKGbk4HzDuR5lGSwHYs61lBfSi3T7iQylyXpwIl2Fi4nkuQyA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.hackerrank.com/domains/algorithms</a> (Tagged with Easy)</span><span class="_2cuy _19ii _2vxa"> -Complete Previous topics</span><span class="_2cuy _19ii _2vxa">  -Sorting</span><span class="_2cuy _19ii _2vxa"> -Searching</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fcertification%2Fdata-structures-and-algorithms%2Fprepare%3Ffbclid%3DIwAR0Xj6mXCudLJzYcKd5jhB0vz_g_zq6frvSiYvJpB-xtI1gHeXDzGPbN1fA&amp;h=AT1azmNShB2O4EAr6k0YZOjTzgB50ml2yvsBZQgCvb8tk68Y7QN3qRTL_QGZL3bgsO9X3FtrHaiB-2DLwRCmbVhJxN6OYTu2HlkCoXIfqQU-XXyCt3bB0skQnfafoGHH5HessA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.codechef.com/certification/data-structures-and-algorithms/prepare</a></span><span class="_2cuy _19ii _2vxa">  -Asymptotic analysis (Big-O notation)</span><span class="_2cuy _19ii _2vxa">  -Arrays</span><span class="_2cuy _19ii _2vxa">  -Strings</span></pre>
                               <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">----------------------------------------------------</span></div>
                               <h3 class="_2cuy _50a1 _2vxa"><span class="_4yxo">[B] For 2nd year student :</span></h3>
                               <ol class="_5a_q _509r" dir="ltr">
                               <li class="_2cuy _509s _2vxa"><span class="_4yxo">Complete Core Java</span></li>
                               </ol>
-                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.javatpoint.com%2Fjava-tutorial%3Ffbclid%3DIwAR1nt3EKx8R1lm7UGIAUkLgbyAogFB__BODEnWaoO3Nw2_4tnO0aYx-ZkAk&amp;h=AT0oD0eWKj6Ynruml5Tw4CnpukHJtglPxR1QwuX9colUfV_3WefXdhsm3ovncr_rFQWKo6m5DZ1wZjDxdlBsmxBZl0ypdcHf2bG4F2Io4aKvnoVhI-R-J0usZ05Ire9O_fTHiw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.javatpoint.com/java-tutorial</a></span><span class="_2cuy _19ii _2vxa">        -OOPS Concepts</span><span class="_2cuy _19ii _2vxa">	-Java String</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK%26fbclid%3DIwAR28QAr1DiVAElhZBUnER1Au_o8wub_5IKoJFpTMvOBG6ihcXyTm_Kmh5ok&amp;h=AT2nC9Dfvkc84Sdmp3-Qrp2zAVRHaQi9eYrGfbFbKi5sMO7r-63XXqyZ-0rtiEN-r2fKoa_bTda1exMTICaZJvMqSpS99z3HuHMdsLnv61oYSNt3mm3bXJkmHFpNp6lNERSxxA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/playlist?list=PLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK</a> </span><span class="_2cuy _19ii _2vxa">   (if not completed yet)</span></pre>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.javatpoint.com%2Fjava-tutorial%3Ffbclid%3DIwAR1nt3EKx8R1lm7UGIAUkLgbyAogFB__BODEnWaoO3Nw2_4tnO0aYx-ZkAk&amp;h=AT0oD0eWKj6Ynruml5Tw4CnpukHJtglPxR1QwuX9colUfV_3WefXdhsm3ovncr_rFQWKo6m5DZ1wZjDxdlBsmxBZl0ypdcHf2bG4F2Io4aKvnoVhI-R-J0usZ05Ire9O_fTHiw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.javatpoint.com/java-tutorial</a></span><span class="_2cuy _19ii _2vxa">        -OOPS Concepts</span><span class="_2cuy _19ii _2vxa"> -Java String</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK%26fbclid%3DIwAR28QAr1DiVAElhZBUnER1Au_o8wub_5IKoJFpTMvOBG6ihcXyTm_Kmh5ok&amp;h=AT2nC9Dfvkc84Sdmp3-Qrp2zAVRHaQi9eYrGfbFbKi5sMO7r-63XXqyZ-0rtiEN-r2fKoa_bTda1exMTICaZJvMqSpS99z3HuHMdsLnv61oYSNt3mm3bXJkmHFpNp6lNERSxxA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/playlist?list=PLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK</a> </span><span class="_2cuy _19ii _2vxa">   (if not completed yet)</span></pre>
                               <div class="_2cuy _3dgx _2vxa">2. <span class="_4yxo">Learn Javascript</span></div>
-                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">1. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.w3schools.com%2Fjs%2Fdefault.asp%3Ffbclid%3DIwAR0yWS5gQkYF-vWzkSAWsXVChUNYj-o7fsYVXwodH6mLJ8kj1oElyKg6BBc&amp;h=AT1-rWAKXKKuC-1cZwgV8Mi-Eub559DbeB0v6e08dY_AyiYJArTCc-l_QLZ3u7NUIk6j4PmpvYWFF-PBOod4BH3kZEDmde5-_0_HTlOaCphGcJRHI2c49QrR_3Q_fFjVzyq46Q" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.w3schools.com/js/default.asp</a></span><span class="_2cuy _19ii _2vxa">2. Solve All Examples</span><span class="_2cuy _19ii _2vxa">	<a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.webhammer.com%2Fjavascript%2Fexamples%2Findex.html%3Ffbclid%3DIwAR2ldCkZXDkXKgfsRPBDI1kA8O8j04fB630XEDDnJ_jqXsPYd8LArlpY5wM&amp;h=AT1v_h3eBpbkT34x5mCbrg1F_CgntCsruy-w8nuRyFJzSi25NI4ofpgmXeuCeyosYl6_row6EIpXM-ttVNhgxbYkjkkRMxWJGeW37HEOv0WY_r9NChf8lnU0v8HeUkcuOx3YDg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">http://www.webhammer.com/javascript/examples/index.html</a></span><span class="_2cuy _19ii _2vxa">3. Solve All Assignments</span><span class="_2cuy _19ii _2vxa">	<a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.webhammer.com%2Fjavascript%2Fexercises%2Findex.html%3Ffbclid%3DIwAR1BrjhjaIn1IPdGO5MyB1qynAJ_6n4p4YgulbKvHySOaKjkndQU0I8FYI0&amp;h=AT2OMMn9eS3Hp2R03ZgdIoD7BqkZVzoEJnPqFA2ANKcWxF3auSRAnJHWmssXgTNY75WqltKUmVkzEnaYr6bwtLSLZvZsyC9ImiTigWomGj9PUOU5lALyyLeBPA0d0QinTajSKI0qtZfrUDqAxWs" target="_blank" rel="noopener nofollow" data-lynx-mode="async">http://www.webhammer.com/javascript/exercises/index.html</a></span><span class="_2cuy _19ii _2vxa"><br /></span></pre>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">1. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.w3schools.com%2Fjs%2Fdefault.asp%3Ffbclid%3DIwAR0yWS5gQkYF-vWzkSAWsXVChUNYj-o7fsYVXwodH6mLJ8kj1oElyKg6BBc&amp;h=AT1-rWAKXKKuC-1cZwgV8Mi-Eub559DbeB0v6e08dY_AyiYJArTCc-l_QLZ3u7NUIk6j4PmpvYWFF-PBOod4BH3kZEDmde5-_0_HTlOaCphGcJRHI2c49QrR_3Q_fFjVzyq46Q" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.w3schools.com/js/default.asp</a></span><span class="_2cuy _19ii _2vxa">2. Solve All Examples</span><span class="_2cuy _19ii _2vxa">  <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.webhammer.com%2Fjavascript%2Fexamples%2Findex.html%3Ffbclid%3DIwAR2ldCkZXDkXKgfsRPBDI1kA8O8j04fB630XEDDnJ_jqXsPYd8LArlpY5wM&amp;h=AT1v_h3eBpbkT34x5mCbrg1F_CgntCsruy-w8nuRyFJzSi25NI4ofpgmXeuCeyosYl6_row6EIpXM-ttVNhgxbYkjkkRMxWJGeW37HEOv0WY_r9NChf8lnU0v8HeUkcuOx3YDg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">http://www.webhammer.com/javascript/examples/index.html</a></span><span class="_2cuy _19ii _2vxa">3. Solve All Assignments</span><span class="_2cuy _19ii _2vxa"> <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.webhammer.com%2Fjavascript%2Fexercises%2Findex.html%3Ffbclid%3DIwAR1BrjhjaIn1IPdGO5MyB1qynAJ_6n4p4YgulbKvHySOaKjkndQU0I8FYI0&amp;h=AT2OMMn9eS3Hp2R03ZgdIoD7BqkZVzoEJnPqFA2ANKcWxF3auSRAnJHWmssXgTNY75WqltKUmVkzEnaYr6bwtLSLZvZsyC9ImiTigWomGj9PUOU5lALyyLeBPA0d0QinTajSKI0qtZfrUDqAxWs" target="_blank" rel="noopener nofollow" data-lynx-mode="async">http://www.webhammer.com/javascript/exercises/index.html</a></span><span class="_2cuy _19ii _2vxa"><br /></span></pre>
                               <div class="_2cuy _3dgx _2vxa">3. <span class="_4yxo">CP</span></div>
                               <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fcertification%2Fprepare%3Ffbclid%3DIwAR1gKQ_eki8Ns_hVHDuel4D7izqv0WEFuOzd9Tacvzg26trcYo7dda5sFO0&amp;h=AT1X_rUh92vu-ALJ54QGcFifQMYduZ_lKcDmWRBq7pL9ODzUqDdunDtpkfrqLCHyVE-cOfpebJ-fQgR5bORkLTXzpzdRPgmutm8iT3C56MEWmsSPU_RuqtM4LAlHKnF9tAID7g" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.codechef.com/certification/prepare</a> <br />        (upto 10 topics, if not completed)</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdomains%2Falgorithms%3Ffbclid%3DIwAR33wTW1-fzGTsy-ZLalDWOFexkMMr2t5_qyrYKKypZC2ChIEsR9-XV9Xf8&amp;h=AT0WetuN9e4xTcvefmM6Jmdlz7ZPTb733sjyWJQYISKJSscfJmHONYisgtAVhhFDuPvXE4PLNHzqEi9sHTNeCMhIUG95iPx9pMH2E7x05w4bjgPOKFq78Q_K9WRDusNvJxzo0g" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.hackerrank.com/domains/algorithms</a>. </span><span class="_2cuy _19ii _2vxa">        Solve as many questions as you can.</span></pre>
                               <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">----------------------------------------------------</span></div>
@@ -288,9 +312,9 @@
                               <ol class="_5a_q _509r" dir="ltr">
                               <li class="_2cuy _509s _2vxa"><span class="_4yxo">Complete Core Java</span></li>
                               </ol>
-                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.javatpoint.com%2Fjava-tutorial%3Ffbclid%3DIwAR3KNMD64NR73pjn9FLCcYr4eOwCLJyoiF-5Ll7W3Hv7B9BYMLXlOjRb0qY&amp;h=AT3TVbPCI7wpCnF1AziipffIg1IUUZu25BwlJv9TOWxPR1DsVQAmvkp9nTFbAqtQor9SSRAo6FDZ0ZC7V4lF1M5a9UjBBoYYHfVEDC3LG9W4l84kZ3m-fwPWYx5HTPWJkKV8nA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.javatpoint.com/java-tutorial</a></span><span class="_2cuy _19ii _2vxa">        -OOPS Concepts</span><span class="_2cuy _19ii _2vxa">	-Java String</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK%26fbclid%3DIwAR3dWYgqNahsUaqP1Z_aRTD7EGWlo0NlsoOyzIwvh5lHeKIc7xAcwYMJuBU&amp;h=AT0YLUlK4MsnO2ck0B8TNGvvySyqhc2xJ8l0_4z-VZ-SjU3Tp2LylwtwZ6hWN9tuHA00OC9d0Ki8RmlgpWxorLbCi9cFi3WFl-W-dB7AvRNADVjHiHWWkRuA-Ac_k8dyU07VAA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/playlist?list=PLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK</a> </span><span class="_2cuy _19ii _2vxa">   (if not completed yet)</span><span class="_2cuy _19ii _2vxa"><br /></span></pre>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.javatpoint.com%2Fjava-tutorial%3Ffbclid%3DIwAR3KNMD64NR73pjn9FLCcYr4eOwCLJyoiF-5Ll7W3Hv7B9BYMLXlOjRb0qY&amp;h=AT3TVbPCI7wpCnF1AziipffIg1IUUZu25BwlJv9TOWxPR1DsVQAmvkp9nTFbAqtQor9SSRAo6FDZ0ZC7V4lF1M5a9UjBBoYYHfVEDC3LG9W4l84kZ3m-fwPWYx5HTPWJkKV8nA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.javatpoint.com/java-tutorial</a></span><span class="_2cuy _19ii _2vxa">        -OOPS Concepts</span><span class="_2cuy _19ii _2vxa"> -Java String</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK%26fbclid%3DIwAR3dWYgqNahsUaqP1Z_aRTD7EGWlo0NlsoOyzIwvh5lHeKIc7xAcwYMJuBU&amp;h=AT0YLUlK4MsnO2ck0B8TNGvvySyqhc2xJ8l0_4z-VZ-SjU3Tp2LylwtwZ6hWN9tuHA00OC9d0Ki8RmlgpWxorLbCi9cFi3WFl-W-dB7AvRNADVjHiHWWkRuA-Ac_k8dyU07VAA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/playlist?list=PLsyeobzWxl7oZ-fxDYkOToURHhMuWD1BK</a> </span><span class="_2cuy _19ii _2vxa">   (if not completed yet)</span><span class="_2cuy _19ii _2vxa"><br /></span></pre>
                               <div class="_2cuy _3dgx _2vxa">2. <span class="_4yxo">Learn Andriod</span></div>
-                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. User Interface</span><span class="_2cuy _19ii _2vxa">	<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fin.udacity.com%2Fcourse%2Fandroid-basics-user-interface--ud834-india%3Ffbclid%3DIwAR0ZJcb4_Jzs9aBZqni_gB6prMmMe6z-xWUAO6rnUDr7nTbkDickPGl5xjk&amp;h=AT2P9mKFL2jIAV63sHD6V1fylNz6DbbLz6JxtsT3PKXjuy6RRRsa_jOp0QCA2L4PZHiGg_xfvuLhktPaOigLTYa22PH5z4S0rmJ_KP4lv-A6KsZXOiMD6cAp50A15T9a08kFQg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://in.udacity.com/course/android-basics-user-interface--ud834-india</a></span><span class="_2cuy _19ii _2vxa">B. User Input</span><span class="_2cuy _19ii _2vxa">	<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fin.udacity.com%2Fcourse%2Fandroid-basics-user-input--ud836%3Ffbclid%3DIwAR1EX7IuhADwcQ6bInAqFcKuY2ssa3yyUMZvwEEQH6CCNqR85YcT24zU3CE&amp;h=AT2sJhMjXaxMPnsQMBlX36BlXYyHgLmWe_IRvym2uD61wD_2fLbCOhVjmTxfiFLxS6-VcnBQrN1LBcczYRJgMvHCNvFIFn0Olwet3cmW7gTK0Hf3BWHFDd8osQc3nzwsOdjjrw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://in.udacity.com/course/android-basics-user-input--ud836</a></span><span class="_2cuy _19ii _2vxa">C. Complete Practice Sets of above links.</span></pre>
+                              <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. User Interface</span><span class="_2cuy _19ii _2vxa"> <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fin.udacity.com%2Fcourse%2Fandroid-basics-user-interface--ud834-india%3Ffbclid%3DIwAR0ZJcb4_Jzs9aBZqni_gB6prMmMe6z-xWUAO6rnUDr7nTbkDickPGl5xjk&amp;h=AT2P9mKFL2jIAV63sHD6V1fylNz6DbbLz6JxtsT3PKXjuy6RRRsa_jOp0QCA2L4PZHiGg_xfvuLhktPaOigLTYa22PH5z4S0rmJ_KP4lv-A6KsZXOiMD6cAp50A15T9a08kFQg" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://in.udacity.com/course/android-basics-user-interface--ud834-india</a></span><span class="_2cuy _19ii _2vxa">B. User Input</span><span class="_2cuy _19ii _2vxa">  <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fin.udacity.com%2Fcourse%2Fandroid-basics-user-input--ud836%3Ffbclid%3DIwAR1EX7IuhADwcQ6bInAqFcKuY2ssa3yyUMZvwEEQH6CCNqR85YcT24zU3CE&amp;h=AT2sJhMjXaxMPnsQMBlX36BlXYyHgLmWe_IRvym2uD61wD_2fLbCOhVjmTxfiFLxS6-VcnBQrN1LBcczYRJgMvHCNvFIFn0Olwet3cmW7gTK0Hf3BWHFDd8osQc3nzwsOdjjrw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://in.udacity.com/course/android-basics-user-input--ud836</a></span><span class="_2cuy _19ii _2vxa">C. Complete Practice Sets of above links.</span></pre>
                               <div class="_2cuy _3dgx _2vxa">3. <span class="_4yxo">CP</span></div>
                               <pre class="_19ik" dir="ltr"><span class="_2cuy _19ii _2vxa">A. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.codechef.com%2Fcertification%2Fprepare%3Ffbclid%3DIwAR1sZcq1mVYLoE1BuqHViEdLo5TGqM1B1eE3wRYSVc-ALwlWs2c_IsTsCeY&amp;h=AT01IT_4brwNvjgqIYqrbssbcglM4V4-EU7rcymwTZIb7HcoCzTrkAI-deWBPoKy3QRWFm0Yeb9NY5VsLSsKzyRzsSkHVRA_yINSmYTczCDsuuqedA-xjVAx1lMUe4gJB-O0LA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.codechef.com/certification/prepare</a> <br />        (upto 10 topics, if not completed)</span><span class="_2cuy _19ii _2vxa">B. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.hackerrank.com%2Fdomains%2Falgorithms%3Ffbclid%3DIwAR1nZJxPTBH7kyKGzMyTQLup_BfNnEYW19AB9N3YFjajBJScm7uQuWBdmkI&amp;h=AT0_DINU7nB4q_wdtXKWWTU9LG6NGU8Y8LtCHgo2az0Xxc86FzYI_46HGWB5X1grdRCcpcktUOWrwyzGsMt-y_UY79ifpWF3LcBfIRtE5TtKiNryFSCvnDqk9nBhJEV4tM5Xcw" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.hackerrank.com/domains/algorithms</a>. </span><span class="_2cuy _19ii _2vxa">        Solve as many questions as you can.</span></pre>
                               <div class="_2cuy _3dgx _2vxa">If you face any problem in any topic, feel free to ask.</div>
@@ -528,6 +552,15 @@
 });
 
     </script>
+    <script>
+
+    function showans(id){
+      console.log(id);
+      var ans = document.getElementById(id);
+      ans.classList.toggle("hide");
+    } 
+
+</script>
 
 </body>
 
