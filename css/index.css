@@ -1,4 +1,9 @@
 
+
+    .container{
+      min-width: 300px;
+    }
+
     .head{
       background-color: white;
       box-shadow: 2px 0 22px grey;
@@ -90,7 +95,6 @@
       border: none;
       border-radius: 0;
       margin-bottom: 40px;
-      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   }
 
   .navbar-btn {
@@ -267,6 +271,13 @@
       #content.active {
           width: calc(100% - 250px);
       }
+
+      #content.active .container{
+        min-width: 400px;
+        overflow-x: scroll;
+        padding-left: 40px;
+
+      }
       .sidebarCollapse span {
           display: none;
       }
@@ -398,13 +409,12 @@
       float:left;
     }
     #contest .con{
+      border-radius: 0px !important;
       background-color: white;
-      padding-bottom: 1.5%;
       margin-top:22px;
       margin-bottom: 22px;
       overflow:hidden;
       border:1px solid #7386D5;
-      border-radius:20px;
       box-sizing: border-box;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       /* border-top-left-radius: 5%;
