@@ -629,28 +629,28 @@ text-align:center;
   padding-bottom:50px;
 }
 
-.developer {
+.contributor {
   margin-bottom: 50px;
   text-align: center;
 }
 
-.developer img {
+.contributor img {
   width: 225px;
   height: 225px;
   border: 7px solid #fff;
   transition:0.3s;
 }
 
-.developer h4 {
+.contributor h4 {
   margin-top: 25px;
   margin-bottom: 0;
   text-transform: none;
 }
 
-.developer p {
+.contributor p {
   margin-top: 0;
 }
 
-.developer img:hover{
+.contributor img:hover{
   transform: scale(1.1);
 }
