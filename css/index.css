@@ -381,6 +381,40 @@
     padding-bottom: 150px;
   }
 
+#projects .container1{
+    width: 98%;
+    padding: 1%;
+    float:left;
+  }
+
+  #projects .main{
+
+    width: 98%;
+    margin-bottom: 1%;
+    height: auto;
+    padding: 1%;
+  }
+
+  #projects .main .row{
+
+
+    margin-left: 3%;
+  }
+#projects .heading{
+
+      font-size: 30px;
+      color: #5258a8;
+      text-transform: uppercase;
+      font-weight: bold;
+
+}
+#projects p{
+    color: black;
+  }
+ .home {
+    padding-bottom: 150px;
+  }
+
   #contest .container1{
       width: 98%;
       padding: 1%;
@@ -654,11 +688,4 @@ text-align:center;
 .contributor img:hover{
   transform: scale(1.1);
 }
-#projects .heading{
 
-      font-size: 30px;
-      color: #5258a8;
-      text-transform: uppercase;
-      font-weight: bold;
-
-}
