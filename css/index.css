@@ -654,3 +654,11 @@ text-align:center;
 .contributor img:hover{
   transform: scale(1.1);
 }
+#projects .heading{
+
+      font-size: 30px;
+      color: #5258a8;
+      text-transform: uppercase;
+      font-weight: bold;
+
+}
