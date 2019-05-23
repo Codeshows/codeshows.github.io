@@ -442,13 +442,16 @@
     }
 #projects p{
     color: black;
+    margin: 20px;
   }
 #projects a{
-    color:blue;
+    color: #2b65ec;
+ 
   }	
   .projects {
     padding-bottom: 150px;
   }
+
 
 
 
