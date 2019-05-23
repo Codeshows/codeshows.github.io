@@ -411,6 +411,9 @@
 #projects p{
     color: black;
   }
+#projects a{
+    color:blue;
+  }	
  .home {
     padding-bottom: 150px;
   }
