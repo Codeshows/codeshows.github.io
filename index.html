@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="stylesheet" href="css/preloader.css">
 
    <!-- Script
    ================================================== -->
@@ -31,6 +32,39 @@
 </head>
 
 <body>
+
+    <!-- Preloader
+   ================================================== -->
+    <div id="loader-wrapper">
+
+    <div class="entry-header">
+      <h1 class="entry-title">CODESHOWS</h1>
+      <div id="bottom-quote">
+        <script>
+          var quote = "";
+          var xhttp = new XMLHttpRequest();
+          xhttp.open("GET", "https://quota.glitch.me/random", true); //free quote api
+          xhttp.send(null);
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+              quote = new String(xhttp.responseText);
+              finalString = quote.substring(14).replace("quoteAuthor", "").replace(/"/g, "").replace('.,:', ' Author: ').replace("}", "");
+              //make the string prettier
+              $('#rand-quote').text(finalString);
+            }
+          };
+        </script>
+        <div class="blockquote text-white" id="rand-quote" style="position:relative; top: 20em;"></div>
+        <div class="blockquote text-white" id="rand-author" style="position:relative; top: 21em;"></div>
+      </div>
+    </div>
+
+    <div id="loader">
+    </div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+
+  </div>
 
    <!-- Header
    ================================================== -->
@@ -561,7 +595,6 @@
       </div>
 
    </footer> <!-- Footer End-->
-
    <!-- Java Script
    ================================================== -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -573,6 +606,15 @@
    <script src="js/jquery.fittext.js"></script>
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
+
+   <script type="text/javascript">
+      $(document).ready(function () {
+          setTimeout(function () {
+            $('body').addClass('loaded');
+            $('#loader-wrapper').remove(); //no need to continue displaying the preloader, wastes cpu.
+          }, 2000);
+        });
+   </script>
 
 </body>
 
