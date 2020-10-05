@@ -13,6 +13,7 @@ Benefits
 * Learn how to contribute to open source
 * Polish web development skills
 * Acts as a project
+* Help in developing open source knowledge
 
 Learning Goals
 --------------
