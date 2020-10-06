@@ -2,7 +2,7 @@ Codeshows Website
 =================
 This is the source code of the website of "Codeshows", the Coding Club of MNIT, Jaipur
 
-We are Open
+We are Open for all
 -----------
 The website is open for contributions from the students of MNIT Jaipur in it's development phase.
 
