@@ -20,7 +20,7 @@ Learning Goals
 2. Get comfortable with pull requests, issues, merge etc on Github
 3. Get comfortable with git
 4. Try hands on different Frontend Technologies and frameworks
-5. Learn to make a project step by step
+5. Learn to make a project step by step.
 
 How to Participate
 ------------------
@@ -29,6 +29,7 @@ Bring in ideas:
 
 1. Create a valid issue.
 2. Discuss the issues with other people
+3. This month we are participating in HacktoberFest, so participate with full potential.
 
 Write Code:
 
