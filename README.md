@@ -30,6 +30,7 @@ Bring in ideas:
 
 1. Create a valid issue.
 2. Discuss the issues with other people
+3. This month we are participating in HacktoberFest, so participate with full potential.
 
 Write Code:
 
