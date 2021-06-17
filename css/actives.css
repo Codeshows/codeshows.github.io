@@ -1,0 +1,23 @@
+
+/*
+ This is the file for styles of all the elements which are meant to be shown special attention
+
+ For example, glowing links
+
+*/
+
+
+
+@keyframes flash {
+    0% {text-shadow: 10px 10px 20px rgb(176, 176, 255), -10px -10px 20px rgb(176, 176, 255);}
+    50% {text-shadow: 2px 2px 10px rgb(10, 134, 235);}
+    100% {text-shadow: 10px 10px 20px rgb(176, 176, 255), -10px -10px 20px rgb(176, 176, 255);}
+}
+
+
+#active /* For glowing texts */
+{
+    /* color: navy !important; */
+    font-weight: 1000;
+    animation: flash 2s infinite;
+}
